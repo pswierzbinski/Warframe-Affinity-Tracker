@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Mercury Junction",
+    "systemIndex": 1,
+    "systemName": "Venus",
+    "exp": 1000,
+    "isDone": false,
+    "steelPathDone": false
+  },
+  {
+    "name": "Mars Junction",
+    "systemIndex": 2,
+    "systemName": "Earth",
+    "exp": 1000,
+    "isDone": false,
+    "steelPathDone": false
+  },
+  {
+    "name": "Venus Junction",
+    "systemIndex": 2,
+    "systemName": "Earth",
+    "exp": 1000,
+    "isDone": false,
+    "steelPathDone": false
+  },
+  {
+    "name": "Ceres Junction",
+    "systemIndex": 3,
+    "systemName": "Mars",
+    "exp": 1000,
+    "isDone": false,
+    "steelPathDone": false
+  },    
+  {
+    "name": "Phobos Junction",
+    "systemIndex": 3,
+    "systemName": "Mars",
+    "exp": 1000,
+    "isDone": false,
+    "steelPathDone": false
+  },
+  {
+    "name": "Jupiter Junction",
+    "systemIndex": 16,
+    "systemName": "Deimos",
+    "exp": 1000,
+    "isDone": false,
+    "steelPathDone": false
+  },
+  {
+    "name": "Europa Junction",
+    "systemIndex": 4,
+    "systemName": "Jupiter",
+    "exp": 1000,
+    "isDone": false,
+    "steelPathDone": false
+  },
+  {
+    "name": "Saturn Junction",
+    "systemIndex": 4,
+    "systemName": "Jupiter",
+    "exp": 1000,
+    "isDone": false,
+    "steelPathDone": false
+  },
+  {
+    "name": "Uranus Junction",
+    "systemIndex": 5,
+    "systemName": "Saturn",
+    "exp": 1000,
+    "isDone": false,
+    "steelPathDone": false
+  },
+  {
+    "name": "Neptune Junction",
+    "systemIndex": 6,
+    "systemName": "Uranus",
+    "exp": 1000,
+    "isDone": false,
+    "steelPathDone": false
+  },
+  {
+    "name": "Pluto Junction",
+    "systemIndex": 7,
+    "systemName": "Neptune",
+    "exp": 1000,
+    "isDone": false,
+    "steelPathDone": false
+  },
+  {
+    "name": "Eris Junction",
+    "systemIndex": 8,
+    "systemName": "Pluto",
+    "exp": 1000,
+    "isDone": false,
+    "steelPathDone": false
+  },
+  {
+    "name": "Sedna Junction",
+    "systemIndex": 7,
+    "systemName": "Neptune",
+    "exp": 1000,
+    "isDone": false,
+    "steelPathDone": false
+  }
+]

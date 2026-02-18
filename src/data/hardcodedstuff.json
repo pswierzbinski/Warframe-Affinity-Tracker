@@ -1,0 +1,121 @@
+[{
+    "name": "Cantic Prism",
+    "masteryReq": 0,
+    "currentLevel": 0,
+    "maxLevelCap": 30,
+    "category": "Amp",
+    "imageName": "cantic-prism-31ad8f20af.png"
+  },
+  {
+    "name": "Granmu Prism",
+    "masteryReq": 0,
+    "currentLevel": 0,
+    "maxLevelCap": 30,
+    "category": "Amp",
+    "imageName": "granmu-prism-1d89042144.png"
+  },
+    {
+    "name": "Klamora Prism",
+    "masteryReq": 0,
+    "currentLevel": 0,
+    "maxLevelCap": 30,
+    "category": "Amp",
+    "imageName": "klamora-prism-c54744e498.png"
+  },
+    {
+    "name": "Lega Prism",
+    "masteryReq": 0,
+    "currentLevel": 0,
+    "maxLevelCap": 30,
+    "category": "Amp",
+    "imageName": "lega-prism-b79c1798cb.png"
+  },
+  {
+    "name": "Mote Prism",
+    "masteryReq": 0,
+    "currentLevel": 0,
+    "maxLevelCap": 30,
+    "category": "Amp",
+    "imageName": "mote-prism-b884fcecd6.png"
+  },
+    {
+    "name": "Rahn Prism",
+    "masteryReq": 0,
+    "currentLevel": 0,
+    "maxLevelCap": 30,
+    "category": "Amp",
+    "imageName": "rahn-prism-93c577260c.png"
+  },
+    {
+    "name": "Raplak Prism",
+    "masteryReq": 0,
+    "currentLevel": 0,
+    "maxLevelCap": 30,
+    "category": "Amp",
+    "imageName": "raplak-prism-5673e55c31.png"
+  },
+    {
+    "name": "Shwaak Prism",
+    "masteryReq": 0,
+    "currentLevel": 0,
+    "maxLevelCap": 30,
+    "category": "Misc",
+    "imageName": "shwaak-prism-d287f0e45f.png"
+  },
+    {
+    "name": "Sirocco",
+    "masteryReq": 0,
+    "currentLevel": 0,
+    "maxLevelCap": 30,
+    "category": "Amp",
+    "imageName": "sirocco-5e978fb468.png"
+  },
+    {
+    "name": "Bad Baby",
+    "masteryReq": 0,
+    "currentLevel": 0,
+    "maxLevelCap": 30,
+    "category": "K-Drive",
+    "imageName": "bad-baby-e8d36e800a.png"
+  },
+    {
+    "name": "Feverspine",
+    "masteryReq": 0,
+    "currentLevel": 0,
+    "maxLevelCap": 30,
+    "category": "K-Drive",
+    "imageName": "feverspine-b2fee8bf77.png"
+  },
+    {
+    "name": "Flatbelly",
+    "masteryReq": 0,
+    "currentLevel": 0,
+    "maxLevelCap": 30,
+    "category": "K-Drive",
+    "imageName": "flatbelly-940adf1fc9.png"
+  },
+    {
+    "name": "Needlenose",
+    "masteryReq": 0,
+    "currentLevel": 0,
+    "maxLevelCap": 30,
+    "category": "K-Drive",
+    "imageName": "needlenose-67c1485e6a.png"
+  },
+    {
+    "name": "Runway",
+    "masteryReq": 0,
+    "currentLevel": 0,
+    "maxLevelCap": 30,
+    "category": "K-Drive",
+    "imageName": "runway-de46f27616.png"
+  },
+  {
+    "name": "Plexus",
+    "masteryReq": 0,
+    "currentLevel": 0,
+    "maxLevelCap": 30,
+    "category": "Archwing",
+    "imageName": "NO-PICTURE.yet"
+  }
+]
