@@ -7,8 +7,11 @@ import { TotalMastery } from "@/classes/TotalMastery";
 import { MapNode } from "@/classes/MapNode";
 
 export async function GET() {
-  const rawItems = new Items({ category: ["Archwing", "Arch-Gun", "Arch-Melee", "Melee", "Pets", "Primary", "Secondary", "Sentinels", "SentinelWeapons", "Warframes"] });
-  const rawNodes = new Items({ category: ["Node"] });
+  const itemsPath = path.join(process.cwd(), "public/data/items.json");
+  const nodesPath = path.join(process.cwd(), "public/data/nodes.json");
+  
+  const rawItems = JSON.parse(fs.readFileSync(itemsPath, "utf-8"));
+  const rawNodes = JSON.parse(fs.readFileSync(nodesPath, "utf-8"));
 
   let mappedNodes: MapNode[] = rawNodes.map(
     (node: any) =>
