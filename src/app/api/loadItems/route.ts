@@ -61,7 +61,7 @@ export async function GET() {
     }
   });
 
-  let response: TotalMastery = new TotalMastery();
+  const response: TotalMastery = new TotalMastery();
 
   const filePath = path.join(process.cwd(), "src/data/hardcodedstuff.json");
   const raw = fs.readFileSync(filePath, "utf-8");

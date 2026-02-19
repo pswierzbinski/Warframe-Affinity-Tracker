@@ -30,7 +30,7 @@ export class Milestones {
         }
     }
     getMilestone(points: number) {
-        let reqs = this.findReq(points);
+        const reqs = this.findReq(points);
         return {
             name: this.names[reqs[2]] || "Unknown",
             req: reqs[0],

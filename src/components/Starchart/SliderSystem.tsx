@@ -12,8 +12,8 @@ interface SliderSystemProps {
 
 const SliderSystem: React.FC<SliderSystemProps> = ({ systemName, systemNodes, setMastered , setAllMastered}: SliderSystemProps) => {
 
-  let allDone: boolean = systemNodes.length > 0 && systemNodes.every(node => node.isDone);
-  let allSpDone: boolean = systemNodes.length > 0 && systemNodes.every(node => node.steelPathDone);
+  const allDone: boolean = systemNodes.length > 0 && systemNodes.every(node => node.isDone);
+  const allSpDone: boolean = systemNodes.length > 0 && systemNodes.every(node => node.steelPathDone);
 
 return (
   <div className="pt-24">

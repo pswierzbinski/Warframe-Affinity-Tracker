@@ -58,7 +58,7 @@ export default function Home() {
 
 
   const updateRank = () => {
-    let rank = MasteryRankHelper.getMilestone(totalAffinity);
+    const rank = MasteryRankHelper.getMilestone(totalAffinity);
     saveToLocalStorage();
 
     if (rank.mr != currentMR) {
