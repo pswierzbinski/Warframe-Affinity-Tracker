@@ -8,7 +8,6 @@ const nextConfig: NextConfig = {
   },
   assetPrefix: isProd ? '/Warframe-Affinity-Tracker/' : '',
   basePath: isProd ? '/Warframe-Affinity-Tracker' : '',
-  output: 'export'
 };
 
 

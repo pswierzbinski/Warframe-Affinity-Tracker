@@ -110,7 +110,6 @@ export async function GET() {
   response.Amp = mappedItems.filter(item => item.category === "Amp");
   response.Necramech = mappedItems.filter(item => item.category === "Necramech");
   response.Kdrives = mappedItems.filter(item => item.category === "K-Drive");
-  response.Companions = mappedItems.filter(item => item.category === "Companions");
   response.Nodes = mappedNodes;
   response.ArchGun.forEach(item => {
     if (item.category === "Arch-Gun") {

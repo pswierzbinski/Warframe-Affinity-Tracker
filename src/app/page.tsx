@@ -2,8 +2,8 @@
 import ItemList from "@/components/Items/ItemList";
 import Topbar from "@/components/Topbar/Topbar";
 import { TotalMastery } from "@/classes/TotalMastery";
-import { useEffect, useState } from "react";
-import { Image, Tab, Tabs, ToastProvider } from "@heroui/react";
+import { useEffect, useRef, useState } from "react";
+import { Button, Image, Tab, Tabs, ToastProvider } from "@heroui/react";
 import NodeList from "@/components/Starchart/NodeList";
 import { MapNode } from "@/classes/MapNode";
 import { Milestones } from "@/classes/Milestones";
@@ -17,6 +17,8 @@ export default function Home() {
   const [currentMRName, setCurrentMRName] = useState<string>("Unranked");
   const [affinityRanges, setAffinityRanges] = useState<number[]>([0, 2500]);
   const MasteryRankHelper: Milestones = new Milestones(); 
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
+  const hasLoaded = useRef(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -36,13 +38,20 @@ export default function Home() {
       setAllMasteryData(tempData);
       setTotalAffinity(tempData.getTotalAffinity())
     }
-    else
-      fetchData();
-
-     updateRank();
+    else{
+    fetchData();
+    updateRank();
+  }
   }, []);
-  
 
+  useEffect(() => {
+  if (!hasLoaded.current && allMasteryData.Amp && allMasteryData.Amp.length > 0) {
+    hasLoaded.current = true;
+    setIsLoaded(true);
+    updateRank();
+  }
+
+}, [allMasteryData]);
   useEffect(() => {
     updateRank();
   }, [totalAffinity]);
@@ -176,7 +185,6 @@ export default function Home() {
     setTotalAffinity(totalAffinity + tmp);
   };
 
-
   const setMastered = (node: MapNode, steelPath: boolean, setTo: boolean) => {
     setAllMasteryData((prevData) => {
       const newData = { ...prevData };
@@ -215,7 +223,289 @@ export default function Home() {
     setAllMasteryData(newData);
     setTotalAffinity(newData.getTotalAffinity());
   }
+  //this is to be changed into a proper skeleton
+  if (!isLoaded) return (
+    <main className="h-dvh flex flex-col bg-linear-to-b from-primary-700 to-[#922d3b] text-white overflow-x-hidden select-none">
+      <ToastProvider placement={"top-right"}/>
+      <Topbar clearLocalStorage={clearLocalStorage} loadFromLocalStorage={loadFromLocalStorage} saveItemsAsJson={saveItemsAsJson} uploadSave={uploadSave} currentMR={currentMR} currentMRName={currentMRName} affinityRanges={affinityRanges} currentAffinity={totalAffinity} />
+      <Tabs className="mt-2" color="primary"
+        classNames={{
+          tabList: "gap-5 m-auto  rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
+          tab: "px-4 h-10 data-[hover=true]:bg-white/10",
+          tabContent: "text-white",
+          cursor: "bg-white/20 backdrop-blur-md",
+        }} variant="bordered">
+        <Tab title={
+          <div className="flex flex-row gap-1">
+            <Image
+              alt={"Warframe"}
+              width={30}
+              height={30}
+              src={`/Icons/${"Warframe"}.webp`}
+              className="min-w-7.5 h-7.5"
+            />
+            <a className="text-base mt-1">Warframe</a>
+          </div>
+        }><div className="mt-18">
+          </div>
+        </Tab>
+        <Tab title={
+          <div className="flex flex-row gap-1">
+            <Image
+              alt={"Primary"}
+              width={30}
+              height={30}
+              src={`/Icons/${"Primary"}.webp`}
+              className="min-w-7.5 h-7.5"
+            />
+            <a className="text-base mt-1">Primary</a>
+          </div>
+        }>
+          <div className="mt-18">
+          </div>
+        </Tab>
+        <Tab title={
+          <div className="flex flex-row gap-1">
+            <Image
+              alt={"Secondary"}
+              width={30}
+              height={30}
+              src={`/Icons/${"Secondary"}.webp`}
+              className="min-w-7.5 h-7.5"
+            />
+            <a className="text-base mt-1">Secondary</a>
+          </div>
+        }>
+          <div className="mt-18">
+          </div>
+        </Tab>
+        <Tab title={
+          <div className="flex flex-row gap-1">
+            <Image
+              alt={"Melee"}
+              width={30}
+              height={30}
+              src={`/Icons/${"Melee"}.webp`}
+              className="min-w-7.5 h-7.5"
+            />
+            <a className="text-base mt-1">Melee</a>
+          </div>
+        }>
+          <div className="mt-18">
+          </div>
+        </Tab>
+        <Tab title={
+          <div className="flex flex-row gap-1">
+            <Image
+              alt={"Companions"}
+              width={30}
+              height={30}
+              src={`/Icons/${"Companions"}.webp`}
+              className="min-w-7.5 h-7.5"
+            />
+            <a className="text-base mt-1">Companions</a>
+          </div>
+        } className="flex flex-col">
+          <Tabs classNames={{
+                  tabList: "gap-5 m-auto  rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
+                  tab: "px-4 h-10 data-[hover=true]:bg-white/10",
+                  tabContent: "text-white",
+                  cursor: "bg-white/20 backdrop-blur-md",
+                }} variant="bordered" color="primary">
+            <Tab title="Sentinel Weapons">
+            </Tab>
+            <Tab title={
+              <div className="flex flex-row gap-1">
+                <Image
+                  alt={"Sentinels"}
+                  width={30}
+                  height={30}
+                  src={`/Icons/${"Companions"}.webp`}
+                  className="min-w-7.5 h-7.5 object-contain"
+                />
+                <a className="text-base mt-1">Sentinels</a>
+              </div>
+            }>
+            </Tab>
+            <Tab title={
+              <div className="flex flex-row gap-1">
+                <Image
+                  alt={"Beasts"}
+                  width={30}
+                  height={30}
+                  src={`/Icons/${"Beasts"}.webp`}
+                  className="min-w-7.5 h-7.5 object-contain"
+                />
+                <a className="text-base mt-1">Beasts</a>
+              </div>
+            }>
+            </Tab>
+          </Tabs>
+        </Tab>
+        <Tab title={
+          <div className="flex flex-row gap-1">
+            <Image
+              alt={"Vehicles"}
+              width={30}
+              height={30}
+              src={`/Icons/${"Vehicles"}.webp`}
+              className="min-w-7.5 h-7.5"
+            />
+            <a className="text-base mt-1">Vehicles</a>
+          </div>
+        } className="flex flex-col">
+          <Tabs classNames={{
+                  tabList: "gap-5 m-auto rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
+                  tab: "px-4 h-10 data-[hover=true]:bg-white/10",
+                  tabContent: "text-white",
+                  cursor: "bg-white/20 backdrop-blur-md",
+                }} variant="bordered" color="primary">
+            <Tab title="K-Drive">
+            </Tab>
+            <Tab title="Necramech">
+            </Tab>
 
+          </Tabs>
+        </Tab>
+        <Tab title={
+          <div className="flex flex-row gap-1">
+            <Image
+              alt={"Archwing"}
+              width={30}
+              height={30}
+              src={`/Icons/${"Archwing"}.webp`}
+              className="min-w-7.5 h-7.5"
+            />
+            <a className="text-base mt-1">Archwing</a>
+          </div>
+        } className="flex flex-col">
+          <Tabs classNames={{
+                  tabList: "gap-5 m-auto rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
+                  tab: "px-4 h-10 data-[hover=true]:bg-white/10",
+                  tabContent: "text-white",
+                  cursor: "bg-white/20 backdrop-blur-md",
+                }} variant="bordered" color="primary">
+            <Tab title={
+              <div className="flex flex-row gap-1">
+                <Image
+                  alt={"Archwing"}
+                  width={30}
+                  height={30}
+                  src={`/Icons/${"Archwing"}.webp`}
+                  className="min-w-7.5 h-7.5"
+                />
+                <a className="text-base mt-1">Archwing</a>
+              </div>
+            } className="flex flex-col">
+            </Tab>
+            <Tab title={
+              <div className="flex flex-row gap-1">
+                <Image
+                  alt={"Archmelee"}
+                  width={30}
+                  height={30}
+                  src={`/Icons/${"Archmelee"}.webp`}
+                  className="min-w-7.5 h-7.5"
+                />
+                <a className="text-base mt-1">Archmelee</a>
+              </div>
+            } className="flex flex-col">
+            </Tab>
+            <Tab title={
+              <div className="flex flex-row gap-1">
+                <Image
+                  alt={"Archgun"}
+                  width={30}
+                  height={30}
+                  src={`/Icons/${"Archgun"}.webp`}
+                  className="min-w-7.5 h-7.5"
+                />
+                <a className="text-base mt-1">Archgun</a>
+              </div>
+            } className="flex flex-col">
+            </Tab>
+          </Tabs>
+        </Tab>
+        <Tab title={
+          <div className="flex flex-row gap-1">
+            <Image
+              alt={"Amp"}
+              width={30}
+              height={30}
+              src={`/Icons/${"Amp"}.webp`}
+              className="min-w-7.5 h-7.5"
+            />
+            <a className="text-base mt-1">Amp</a>
+          </div>
+        }>
+          <div className="mt-18">
+          </div>
+        </Tab>
+        <Tab title={
+          <div className="flex flex-row gap-1">
+            <Image
+              alt={"Starchart"}
+              width={30}
+              height={30}
+              src={`/Icons/${"Sortie"}.webp`}
+              className="min-w-7.5 h-7.5"
+            />
+            <a className="text-base mt-1">Starchart</a>
+          </div>
+        }>
+        </Tab>
+        <Tab title={
+          <div className="flex flex-row gap-1">
+            <Image
+              alt={"Intrinsics"}
+              width={30}
+              height={30}
+              src={`/Icons/${"Intrinsics"}.webp`}
+              className="min-w-7.5 h-7.5"
+            />
+            <a className="text-base mt-1">Intrinsics</a>
+          </div>
+        } className="flex flex-col">
+          <Tabs classNames={{
+                  tabList: "gap-5 m-auto rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
+                  tab: "px-4 h-10 data-[hover=true]:bg-white/10",
+                  tabContent: "text-white",
+                  cursor: "bg-white/20 backdrop-blur-md",
+                }} variant="bordered">
+            <Tab title={
+              <div className="flex flex-row gap-1">
+                <Image
+                  alt={"Drifter"}
+                  width={30}
+                  height={30}
+                  src={`/Icons/${"Operator"}.webp`}
+                  className="min-w-7.5 h-7.5"
+                />
+                <a className="text-base mt-1">Drifter</a>
+              </div>
+            } className="flex flex-col">
+            </Tab>
+            <Tab title={
+              <div className="flex flex-row gap-1">
+                <Image
+                  alt={"Railjack"}
+                  width={30}
+                  height={30}
+                  src={`/Icons/${"Railjack"}.webp`}
+                  className="min-w-7.5 h-7.5"
+                />
+                <a className="text-base mt-1">Railjack</a>
+              </div>
+            } className="flex flex-col">
+            </Tab>
+          </Tabs>
+        </Tab>
+      </Tabs>
+      <div className="h-full grow"></div>
+
+    </main>
+  );
+  
   return (
     <main className="h-dvh flex flex-col bg-linear-to-b from-primary-700 to-[#922d3b] text-white overflow-x-hidden select-none">
       <ToastProvider placement={"top-right"}/>

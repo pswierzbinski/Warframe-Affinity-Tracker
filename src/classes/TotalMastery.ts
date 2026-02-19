@@ -7,7 +7,6 @@ export interface TotalMastery {
     Archwing: Item[];
     ArchGun: Item[];
     ArchMelee: Item[];
-    Companions: Item[];
     Kdrives: Item[];
     Melee: Item[];
     Necramech: Item[];
@@ -29,7 +28,6 @@ export class TotalMastery {
     Archwing: Item[];
     ArchGun: Item[];
     ArchMelee: Item[];
-    Companions: Item[];
     Kdrives: Item[];
     Melee: Item[];
     Necramech: Item[];
@@ -51,7 +49,6 @@ export class TotalMastery {
         this.Archwing = [];
         this.ArchGun = [];
         this.ArchMelee = [];
-        this.Companions = [];
         this.Kdrives = [];
         this.Melee = [];
         this.Necramech = [];
@@ -83,10 +80,6 @@ export class TotalMastery {
 
     setArchMelee(items: Item[]) {
         this.ArchMelee = items;
-    }
-
-    setCompanions(items: Item[]) {
-        this.Companions = items;
     }
 
     setKdrives(items: Item[]) {
@@ -156,7 +149,6 @@ export class TotalMastery {
         this.Archwing.forEach(item => total += item.currentLevel * 200);
         this.ArchGun.forEach(item => total += item.currentLevel * 100);
         this.ArchMelee.forEach(item => total += item.currentLevel * 100);
-        this.Companions.forEach(item => total += item.currentLevel * 200);
         this.Kdrives.forEach(item => total += item.currentLevel * 200);
         this.Melee.forEach(item => total += item.currentLevel * 100);
         this.Necramech.forEach(item => total += item.currentLevel * 200);
@@ -205,7 +197,6 @@ export class TotalMastery {
         tm.Archwing = json.Archwing.map((itemJson: any) => Item.fromJSON(itemJson));
         tm.ArchGun = json.ArchGun.map((itemJson: any) => Item.fromJSON(itemJson));
         tm.ArchMelee = json.ArchMelee.map((itemJson: any) => Item.fromJSON(itemJson));
-        tm.Companions = json.Companions.map((itemJson: any) => Item.fromJSON(itemJson));
         tm.Kdrives = json.Kdrives.map((itemJson: any) => Item.fromJSON(itemJson));
         tm.Melee = json.Melee.map((itemJson: any) => Item.fromJSON(itemJson));
         tm.Necramech = json.Necramech.map((itemJson: any) => Item.fromJSON(itemJson));
