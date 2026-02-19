@@ -2,7 +2,6 @@
   "name": "warframe-affinity-tracker",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://pswierzbinski.github.io/Warframe-Affinity-Tracker",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
