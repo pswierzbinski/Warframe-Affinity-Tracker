@@ -1,5 +1,7 @@
 
 ## Warframe Affinity Tracker
+[Currently deployed on Vercel.](https://warframe-affinity-tracker.vercel.app/)
+
 The app aims to help keeping track of your mastered warframes, weapons, companions, completed mission nodes and intrisincs. 
 
 The save is automatically saved in cookies, but it can also be exported to a .json file that is used to load the save when no cookie data is present.
