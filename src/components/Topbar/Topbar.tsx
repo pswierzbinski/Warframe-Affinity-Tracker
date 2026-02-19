@@ -101,7 +101,7 @@ const Topbar: React.FC<TopbarProps> = ({ clearLocalStorage, saveItemsAsJson, loa
                                 {currentAffinity} / {affinityRanges[1]} ({progressRounded}%)
                             </span>
                             <span
-                                className="absolute -top-5 text-xs text-white hidden group-hover:block"
+                                className="absolute -top-4.5 text-xs text-white hidden group-hover:block"
                                 style={{ left: `50%`, transform: "translateX(-50%)" }}>
                                 {calculatedAffinity} / {calculatedRange} ({progressRounded}%)
                             </span>
