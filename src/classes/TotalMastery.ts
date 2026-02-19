@@ -144,7 +144,7 @@ export class TotalMastery {
 
 
     getTotalAffinity() {
-        var total = this.itemsExp + this.starchartExp + this.starchartExpSp;
+        let total = this.itemsExp + this.starchartExp + this.starchartExpSp;
         this.Amp.forEach(item => total += item.currentLevel * 100);
         this.Archwing.forEach(item => total += item.currentLevel * 200);
         this.ArchGun.forEach(item => total += item.currentLevel * 100);

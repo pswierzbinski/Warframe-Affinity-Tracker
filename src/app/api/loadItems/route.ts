@@ -10,7 +10,7 @@ export async function GET() {
   const rawItems = new Items({ category: ["Archwing", "Arch-Gun", "Arch-Melee", "Melee", "Pets", "Primary", "Secondary", "Sentinels", "SentinelWeapons", "Warframes"] });
   const rawNodes = new Items({ category: ["Node"] });
 
-  var mappedNodes: MapNode[] = rawNodes.map(
+  let mappedNodes: MapNode[] = rawNodes.map(
     (node: any) =>
       new MapNode(
         node.name,
@@ -25,7 +25,7 @@ export async function GET() {
   const hardcodedJunctions = JSON.parse(rawJunctions);
   mappedNodes = [...mappedNodes, ...hardcodedJunctions];
 
-  var mappedItems: Item[] = rawItems.map(
+  let mappedItems: Item[] = rawItems.map(
     (item: any) =>
       new Item(
         item.name,
@@ -39,11 +39,11 @@ export async function GET() {
 
   mappedItems = mappedItems.filter(item => item.name !== "Sirocco");
 
-  let voidrig = mappedItems.filter(item => item.name === "Voidrig");
+  const voidrig = mappedItems.filter(item => item.name === "Voidrig");
   if (voidrig)
     voidrig[0].category = "Necramech";
 
-  let bonewidow = mappedItems.filter(item => item.name === "Bonewidow");
+  const bonewidow = mappedItems.filter(item => item.name === "Bonewidow");
   if (bonewidow)
     bonewidow[0].category = "Necramech";
 
@@ -61,7 +61,7 @@ export async function GET() {
     }
   });
 
-  var response: TotalMastery = new TotalMastery();
+  let response: TotalMastery = new TotalMastery();
 
   const filePath = path.join(process.cwd(), "src/data/hardcodedstuff.json");
   const raw = fs.readFileSync(filePath, "utf-8");

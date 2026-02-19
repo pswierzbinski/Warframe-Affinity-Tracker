@@ -58,7 +58,7 @@ export default function Home() {
 
 
   const updateRank = () => {
-    var rank = MasteryRankHelper.getMilestone(totalAffinity);
+    let rank = MasteryRankHelper.getMilestone(totalAffinity);
     saveToLocalStorage();
 
     if (rank.mr != currentMR) {
@@ -150,7 +150,7 @@ export default function Home() {
   }
 
   const setAllMastered = (nodes: MapNode[], steelPath: boolean, setTo: boolean) => {
-    var tmp = 0;
+    let tmp = 0;
     setAllMasteryData((prevData) => {
       const newData = { ...prevData };
       nodes.forEach((node) => {

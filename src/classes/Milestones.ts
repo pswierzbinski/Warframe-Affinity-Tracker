@@ -7,7 +7,7 @@ export class Milestones {
                         "True Master", "Legendary 1", "Legendary 2", "Legendary 3", "Legendary 4",
                         "Legendary 5"];
     calcReq(level: number) {
-        var total = 2500;
+        let total = 2500;
         if (level == 0)
             return total;
         for (let i = 1; i < 30 && i < level; i++)
@@ -30,7 +30,7 @@ export class Milestones {
         }
     }
     getMilestone(points: number) {
-        var reqs = this.findReq(points);
+        let reqs = this.findReq(points);
         return {
             name: this.names[reqs[2]] || "Unknown",
             req: reqs[0],
