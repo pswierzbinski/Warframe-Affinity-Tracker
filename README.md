@@ -13,6 +13,7 @@ This is the first version of the tracker app and it will be improved and its fun
 Future plans:
 * Search/filter lists
 * Hide mastered items
+* Mobile version support
 * Show information about the cost of specific items, links to wiki
 * World status 
 ## 
