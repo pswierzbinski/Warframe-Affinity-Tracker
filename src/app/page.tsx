@@ -225,7 +225,7 @@ export default function Home() {
   }
   //this is to be changed into a proper skeleton
   if (!isLoaded) return (
-    <main className="h-dvh flex flex-col bg-linear-to-b from-primary-700 to-[#922d3b] text-white overflow-x-hidden select-none">
+    <main className="h-dvh flex flex-col bg-linear-to-b from-primary-700 to-[#922d3b] text-white select-none">
       <ToastProvider placement={"top-right"}/>
       <Topbar clearLocalStorage={clearLocalStorage} loadFromLocalStorage={loadFromLocalStorage} saveItemsAsJson={saveItemsAsJson} uploadSave={uploadSave} currentMR={currentMR} currentMRName={currentMRName} affinityRanges={affinityRanges} currentAffinity={totalAffinity} />
       <Tabs className="mt-2" color="primary"
