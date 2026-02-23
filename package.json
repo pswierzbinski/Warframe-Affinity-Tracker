@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@heroui/input": "^2.4.27",
     "@heroui/number-input": "^2.0.17",
     "@heroui/react": "^2.8.4",

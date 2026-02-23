@@ -4,13 +4,11 @@ import { TotalMastery } from "../../classes/TotalMastery";
 import { Card, CardBody, NumberInput, Divider, Checkbox } from "@heroui/react";
 import { Pagination } from "@heroui/pagination";
 import { ItemImage } from "@/components/Items/ItemImage";
+import { useGlobal } from '@/context/GlobalContext';
 
 interface ItemListProps {
   items: Item[];
   setLevel: (item: keyof TotalMastery, name: string, level: number) => void;
-}
-const setMaxLevel = (item: Item) => {
-  item.currentLevel = item.maxLevelCap ?? 0;
 }
 
 export const CheckIcon = (props: any) => {
@@ -36,10 +34,12 @@ export const CheckIcon = (props: any) => {
 const ItemList: React.FC<ItemListProps> = ({ items, setLevel }: ItemListProps) => {
   const [page, setPage] = useState(1);
   const itemsPerPage = 9;
-  const totalPages = Math.ceil(items.length / itemsPerPage);
+  const { hideMastered, setHideMastered } = useGlobal();
+  const tempItems = items.filter((item) => !hideMastered || item.currentLevel != item.maxLevelCap);
+  const totalPages = Math.ceil(tempItems.length / itemsPerPage);
   const startIndex = (page - 1) * itemsPerPage;
-  const currentItems = items.slice(startIndex, startIndex + itemsPerPage);
-
+  const currentItems = tempItems.slice(startIndex, startIndex + itemsPerPage);
+  
   const updateItemLevel = (item: Item, newLevel: number) => {
     if (newLevel >= 0 && item.maxLevelCap && newLevel <= item.maxLevelCap)
       setLevel(item.category as keyof TotalMastery, item.name, newLevel);

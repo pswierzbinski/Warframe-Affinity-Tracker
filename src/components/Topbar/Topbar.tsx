@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Navbar, Link, NavbarBrand, NavbarContent, NavbarItem, Button, Modal, ModalContent, ModalFooter, ModalBody, ModalHeader, useDisclosure, Image, Popover, PopoverTrigger, PopoverContent } from "@heroui/react";
+import { Navbar, Link, NavbarBrand, NavbarContent, NavbarItem, Button, Modal, ModalContent, ModalFooter, ModalBody, ModalHeader, useDisclosure, Image, Popover, PopoverTrigger, PopoverContent, Switch, Divider } from "@heroui/react";
 import SaveUpload from "./SaveUpload";
+import { useGlobal } from '@/context/GlobalContext';
+import { ArrowDownTrayIcon, ArrowUpTrayIcon, EyeIcon, EyeSlashIcon, TrashIcon } from "@heroicons/react/24/solid";
+
 
 interface TopbarProps {
     clearLocalStorage: () => void;
@@ -12,6 +15,7 @@ interface TopbarProps {
     affinityRanges: number[];
     currentAffinity: number;
 }
+
 export const GitHubIcon = ({ fill = "currentColor", ...props }) => {
     return (
         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -20,6 +24,7 @@ export const GitHubIcon = ({ fill = "currentColor", ...props }) => {
         </svg>
     );
 };
+
 const Topbar: React.FC<TopbarProps> = ({ clearLocalStorage, saveItemsAsJson, loadFromLocalStorage, uploadSave, currentMR, currentMRName, affinityRanges, currentAffinity }) => {
     const [calculatedRange, setCalculatedRange] = useState<number>(2500);
     const [calculatedAffinity, setCalculatedAffinity] = useState<number>(0);
@@ -27,11 +32,13 @@ const Topbar: React.FC<TopbarProps> = ({ clearLocalStorage, saveItemsAsJson, loa
     const [isOpenPop, setIsOpenPop] = React.useState(false);
     const progress = ((currentAffinity - affinityRanges[0]) / (affinityRanges[1] - affinityRanges[0])) * 100;
     const progressRounded = Math.round(Math.min(100, Math.max(0, progress)) * 100) / 100;
+    const { hideMastered, setHideMastered } = useGlobal();
 
     useEffect(() => {
         setCalculatedRange(affinityRanges[1] - affinityRanges[0]);
         setCalculatedAffinity(currentAffinity - affinityRanges[0]);
     }, [currentAffinity]);
+    
     //2nd useEffect because it did not update on first change when the MR ranges were changed, to be improved
     useEffect(() => {
         setCalculatedRange(affinityRanges[1] - affinityRanges[0]);
@@ -73,16 +80,32 @@ const Topbar: React.FC<TopbarProps> = ({ clearLocalStorage, saveItemsAsJson, loa
                             <GitHubIcon />
                         </Button>
                     </NavbarItem>
+                    <Divider orientation="vertical" />
+
+                    <NavbarItem>
+                        <div className="flex flex-col items-center gap-2">
+                            <Switch
+                                isSelected={hideMastered}
+                                endContent={<EyeIcon/>}
+                                onValueChange={setHideMastered}
+                                startContent={<EyeSlashIcon/>}
+                                size="md"
+                                color="primary"
+                                className="border border-white/50 rounded-full p-0.5" />
+                            <span className="text-sm text-white">Hide Mastered</span>
+
+                        </div>
+                    </NavbarItem>
                     <NavbarItem>
                         <Button onPress={saveItemsAsJson} variant="bordered" className="border-white/80 text-white rounded-full backdrop-blur-sm bg-white/5 hover:bg-white/10 hover:border-white md:text-sm">
-                            Download Save
+                               <ArrowDownTrayIcon className="size-6"/>Download Save
                         </Button>
                     </NavbarItem>
                     <NavbarItem>
                         <Popover isOpen={isOpenPop} onOpenChange={(open) => setIsOpenPop(open)} color={"warning"} placement="bottom" showArrow backdrop={"opaque"}>
                             <PopoverTrigger>
                                 <Button onPress={clearLocalStorage} variant="bordered" className="border-white/80 text-white rounded-full backdrop-blur-sm bg-white/5 hover:bg-white/10 hover:border-white md:text-sm">
-                                    Clear saved data
+                                    <TrashIcon className="size-6"/> Clear saved data
                                 </Button>
                             </PopoverTrigger>
                             {content}
@@ -90,10 +113,11 @@ const Topbar: React.FC<TopbarProps> = ({ clearLocalStorage, saveItemsAsJson, loa
                     </NavbarItem>
                     <NavbarItem>
                         <Button onPress={onOpen} variant="bordered" className="border-white/80 text-white rounded-full backdrop-blur-sm bg-white/5 hover:bg-white/10 hover:border-white md:text-sm">
-                            Upload save file
+                           <ArrowUpTrayIcon className="size-6"/> Upload save file
                         </Button>
                     </NavbarItem>
                 </NavbarContent>
+                <Divider orientation="vertical" />
 
                 <NavbarContent>
                     <NavbarItem>
