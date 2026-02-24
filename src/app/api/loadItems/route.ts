@@ -7,6 +7,12 @@ import { TotalMastery } from "@/classes/TotalMastery";
 import { MapNode } from "@/classes/MapNode";
 
 export async function GET() {
+  //Dev api call
+  // const rawItems = new Items({ category: ["Archwing", "Arch-Gun", "Arch-Melee", "Melee", "Pets", "Primary", "Secondary", "Sentinels", "SentinelWeapons", "Warframes"] });
+  // const rawNodes = new Items({ category: ["Node"] });
+
+
+  //Prod api call
   const itemsPath = path.join(process.cwd(), "public/data/items.json");
   const nodesPath = path.join(process.cwd(), "public/data/nodes.json");
   
@@ -81,34 +87,29 @@ export async function GET() {
     return item.category === "Secondary";
   });
 
+  //the @wfcd/warframe-items api categorizes all zaw components as melee and the masterable ones are pulled twice
+  const dupeMeleeNames = ["Balla", "Cyath", "Dehtat", "Kronsh", "Mewan", "Ooltha", "Plague Keewar", "Plague Kripath"];
+  const unMasterableNames = ["Ekwana Ii Jai", "Ekwana Ii Ruhang", "Ekwana Jai", "Ekwana Jai Ii", "Ekwana Ruhang", "Ekwana Ruhang Ii", "Jai", "Jai Ii", "Jayap", "Korb", "Kroostra", "Kwath", "Laka", "Peye", "Plague Akwin", "Plague Bokwin",
+                              "Ruhang", "Ruhang Ii", "Seekalla", "Shtung", "Vargeet Ii Jai", "Vargeet Ii Ruhang", "Vargeet Jai", "Vargeet Jai Ii", "Vargeet Ruhang", "Vargeet Ruhang Ii"];
+
   response.Melee = mappedItems.filter((item, index) => {
-    if (item.name === "Balla" && item.category === "Melee") {
-      return mappedItems.findIndex(i => i.name === "Balla" && i.category === "Melee") !== index;
+    if (item.category !== "Melee") return false;
+    if (item.category === "Melee" && unMasterableNames.includes(item.name)) {
+      return false;
     }
-    if (item.name === "Cyath" && item.category === "Melee") {
-      return mappedItems.findIndex(i => i.name === "Cyath" && i.category === "Melee") !== index;
+    if (item.category === "Melee" && dupeMeleeNames.includes(item.name)) {
+      return mappedItems.findIndex(i => i.name === item.name && i.category === "Melee") !== index;
     }
-    if (item.name === "Dehtat" && item.category === "Melee") {
-      return mappedItems.findIndex(i => i.name === "Dehtat" && i.category === "Melee") !== index;
-    }
-    if (item.name === "Kronsh" && item.category === "Melee") {
-      return mappedItems.findIndex(i => i.name === "Kronsh" && i.category === "Melee") !== index;
-    }
-    if (item.name === "Plague Keewar" && item.category === "Melee") {
-      return mappedItems.findIndex(i => i.name === "Plague Keewar" && i.category === "Melee") !== index;
-    }
-    if (item.name === "Plague Kripath" && item.category === "Melee") {
-      return mappedItems.findIndex(i => i.name === "Plague Kripath" && i.category === "Melee") !== index;
-    }
-    return item.category === "Melee";
+
+    return true;
   });
 
 
   response.Archwing = mappedItems.filter(item => item.category === "Archwing");
   response.ArchGun = mappedItems.filter(item => item.category === "Arch-Gun");
   response.ArchMelee = mappedItems.filter(item => item.category === "Arch-Melee");
-  response.Pets = mappedItems.filter(item => item.category === "Pets" && !/(core|mutagen|gyro|antigen|bracket|stabilizer)/i.test(item.name));
-  response.Sentinels = mappedItems.filter(item => item.category === "Sentinels");
+  response.Pets = mappedItems.filter(item => item.category === "Pets" && !/(core|mutagen|gyro|antigen|bracket|stabilizer)/i.test(item.name) && !/(Moa|Hound)$/i.test(item.name));
+  response.Sentinels = mappedItems.filter(item => item.category === "Sentinels" || (item.category === "Pets" && /(Moa|Hound)$/i.test(item.name)));
   response.SentinelWeapons = mappedItems.filter(item => item.category === "SentinelWeapons");
   response.Amp = mappedItems.filter(item => item.category === "Amp");
   response.Necramech = mappedItems.filter(item => item.category === "Necramech");

@@ -312,18 +312,18 @@ export default function Home() {
                   tabContent: "text-white",
                   cursor: "bg-white/20 backdrop-blur-md",
                 }} variant="bordered" color="primary">
-            <Tab title="Sentinel Weapons">
+            <Tab title="Robotic Weapons">
             </Tab>
             <Tab title={
               <div className="flex flex-row gap-1">
                 <Image
-                  alt={"Sentinels"}
+                  alt={"Robotics"}
                   width={30}
                   height={30}
                   src={`/Icons/${"Companions"}.webp`}
                   className="min-w-7.5 h-7.5 object-contain"
                 />
-                <a className="text-base mt-1">Sentinels</a>
+                <a className="text-base mt-1">Robotics</a>
               </div>
             }>
             </Tab>
@@ -598,19 +598,19 @@ export default function Home() {
                   tabContent: "text-white",
                   cursor: "bg-white/20 backdrop-blur-md",
                 }} variant="bordered" color="primary">
-            <Tab title="Sentinel Weapons">
+            <Tab title="Robotic Weapons">
               <ItemList items={allMasteryData?.SentinelWeapons || []} setLevel={setLevel} />
             </Tab>
             <Tab title={
               <div className="flex flex-row gap-1">
                 <Image
-                  alt={"Sentinels"}
+                  alt={"Robotics"}
                   width={30}
                   height={30}
                   src={`/Icons/${"Companions"}.webp`}
                   className="min-w-7.5 h-7.5 object-contain"
                 />
-                <a className="text-base mt-1">Sentinels</a>
+                <a className="text-base mt-1">Robotics</a>
               </div>
             }>
               <ItemList items={allMasteryData?.Sentinels || []} setLevel={setLevel} />
