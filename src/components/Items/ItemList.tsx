@@ -39,7 +39,7 @@ const ItemList: React.FC<ItemListProps> = ({ items, setLevel }: ItemListProps) =
   const totalPages = Math.ceil(tempItems.length / itemsPerPage);
   const startIndex = (page - 1) * itemsPerPage;
   const currentItems = tempItems.slice(startIndex, startIndex + itemsPerPage);
-  
+
   const updateItemLevel = (item: Item, newLevel: number) => {
     if (newLevel >= 0 && item.maxLevelCap && newLevel <= item.maxLevelCap)
       setLevel(item.category as keyof TotalMastery, item.name, newLevel);
@@ -53,55 +53,62 @@ const ItemList: React.FC<ItemListProps> = ({ items, setLevel }: ItemListProps) =
   const affinityPerLevel = higherMastery.includes(items[0].category) ? 200 : 100;
   return (
     <div>
-      <div className="grid lg:grid-cols-3 gap-6">
+      <div className="grid lg:grid-cols-3 gap-4">
         {currentItems.map((item) => {
           const isMaxed = item.currentLevel === item.maxLevelCap;
           return (
             <Card
               key={item.name}
-              className="min-h-77.5 bg-white/10 backdrop-blur-md border border-white/15 shadow-lg rounded-xl">
-              <CardBody className="p-4 flex flex-col gap-3">
-                <div className="text-white text-center text-2xl font-bold  select-text">
-                  {item.name}
-                </div>
+              className="3xl:max-h-55 4xl:max-h-80 bg-white/10 backdrop-blur-md border border-white/15 shadow-lg rounded-xl">
+              <CardBody className="p-4 4xl:p-4  gap-3">
+
                 <div className="grid grid-cols-[auto_1fr] gap-4">
-                    <div className="rounded-xl bg-black/20">
-                      <ItemImage
-                        src={`https://cdn.warframestat.us/img/${item.imageName}`}
-                      />
+                  <div className="rounded-xl bg-black/20 h-fit self-center">
+                    <ItemImage
+                      src={`https://cdn.warframestat.us/img/${item.imageName}`}
+                    />
                   </div>
-
-                  <div className="flex flex-col justify-center gap-3">
-                    <div className="text-white/80">
-                      Current affinity
-                      <div className="text-lg text-white leading-none">
-                        {item.currentLevel * (affinityPerLevel ?? 0)}
-                      </div>
+                  <div className="flex flex-col ">
+                    <div className="text-white text-center text-2xl font-bold select-text">
+                      {item.name}
                     </div>
-                    <Checkbox
-                      isSelected={isMaxed}
-                      onValueChange={(checked) =>
-                        updateItemLevel(
-                          item,
-                          checked ? item.maxLevelCap : 0
-                        )
-                      }
-                      classNames={{
-                        label: "text-sm text-white/70 group-data-[selected=true]:text-white",
-                      }}>
-                      Set max level
-                    </Checkbox>
+                    <div className="flex flex-row 4xl:flex-col flex-1 justify-center 3xl:self-start">
+                      <div className="text-white/80 self-center pr-3">
+                        Current affinity: <a className="text-lg text-white leading-none ml-1">{item.currentLevel * (affinityPerLevel ?? 0)}</a>
+                      </div>
+                        <Checkbox
+                          isSelected={isMaxed}
+                          size="md"
+                          onValueChange={(checked) =>
+                            updateItemLevel(
+                              item,
+                              checked ? item.maxLevelCap : 0
+                            )
+                          }
+                          classNames={{
+                            label: "text-md text-white/70 group-data-[selected=true]:text-white",
+                          }}>
+                          Set max level
+                        </Checkbox>
+                    </div>
+                    <Divider className="mb-2"/>
+                    <NumberInput
+                          label="Current level"
+                          variant="faded"
+                          minValue={0}
+                          maxValue={item.maxLevelCap}
+                          value={item.currentLevel}
+                          onValueChange={(val) => updateItemLevel(item, val)}
+                          className="max-w-full bg-white/5 rounded-lg"
+                          classNames={{
+                            input: "text-md",
+                            label: "text-white 2xl:text-lg",
+                            stepperWrapper:"flex flex-row-reverse",
+                            stepperButton: "w-9 h-9 border-2 border-black/20"
+                          }}
+                        />
                   </div>
-
                 </div>
-                <Divider/>
-                <NumberInput
-                  label="Current level"
-                  min={0}
-                  max={item.maxLevelCap}
-                  value={item.currentLevel}
-                  onValueChange={(val) => updateItemLevel(item, val)}
-                  className="max-w-full bg-white/5 rounded-lg" />
               </CardBody>
             </Card>
           );

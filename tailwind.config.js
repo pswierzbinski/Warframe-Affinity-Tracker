@@ -13,7 +13,6 @@ module.exports = {
   ], theme: {
     extend: {},
   },
-  darkmode: "class",
   variants: {
     extend: {},
   },
