@@ -10,9 +10,11 @@ The save is automatically saved in cookies, but it can also be exported to a .js
 
 This is the first version of the tracker app and it will be improved and its functionalities are to be expanded.
 
+(+ means what I am currently working on)
 Future plans:
 * Search/filter lists
-* Hide mastered items
+* Changing the way a new save is created (make it load from a file instead of calling warframe-items api everytime) +
+* Updating old save to new version
 * Mobile version support
 * Show information about the cost of specific items, links to wiki
 * World status 
