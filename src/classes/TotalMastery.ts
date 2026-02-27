@@ -19,6 +19,7 @@ export interface TotalMastery {
     Nodes: MapNode[];
     starchartExp: number;
     starchartExpSp: number;
+    itemsExp: number;
     drifterIntrinsics: Intrinsic[];
     railjackIntrinsics: Intrinsic[];
 }
@@ -44,27 +45,27 @@ export class TotalMastery {
     drifterIntrinsics: Intrinsic[];
     railjackIntrinsics: Intrinsic[];
 
-    constructor() {
-        this.Amp = [];
-        this.Archwing = [];
-        this.ArchGun = [];
-        this.ArchMelee = [];
-        this.Kdrives = [];
-        this.Melee = [];
-        this.Necramech = [];
-        this.Pets = [];
-        this.Primary = [];
-        this.Secondary = [];
-        this.Sentinels = [];
-        this.SentinelWeapons = [];
-        this.Warframes = [];
-        this.Nodes = [];
-        this.starchartExp = 0;
-        this.starchartExpSp = 0;
-        this.itemsExp = 0;
-        this.drifterIntrinsics = [new Intrinsic("Combat"), new Intrinsic("Riding"), new Intrinsic("Opportunity"), new Intrinsic("Endurance")];
-        this.railjackIntrinsics = [new Intrinsic("Tactical"), new Intrinsic("Piloting"), new Intrinsic("Gunnery"), new Intrinsic("Engineering"), new Intrinsic("Command")];
-    }
+    constructor(data?: Partial<TotalMastery>) {
+    this.Amp = data?.Amp ?? [];
+    this.Archwing = data?.Archwing ?? [];
+    this.ArchGun = data?.ArchGun ?? [];
+    this.ArchMelee = data?.ArchMelee ?? [];
+    this.Kdrives = data?.Kdrives ?? [];
+    this.Melee = data?.Melee ?? [];
+    this.Necramech = data?.Necramech ?? [];
+    this.Pets = data?.Pets ?? [];
+    this.Primary = data?.Primary ?? [];
+    this.Secondary = data?.Secondary ?? [];
+    this.Sentinels = data?.Sentinels ?? [];
+    this.SentinelWeapons = data?.SentinelWeapons ?? [];
+    this.Warframes = data?.Warframes ?? [];
+    this.Nodes = data?.Nodes ?? [];
+    this.starchartExp = data?.starchartExp ?? 0;
+    this.starchartExpSp = data?.starchartExpSp ?? 0;
+    this.itemsExp = data?.itemsExp ?? 0;
+    this.drifterIntrinsics = data?.drifterIntrinsics ?? [new Intrinsic("Combat"), new Intrinsic("Riding"), new Intrinsic("Opportunity"), new Intrinsic("Endurance")];
+    this.railjackIntrinsics = data?.railjackIntrinsics ?? [new Intrinsic("Tactical"), new Intrinsic("Piloting"), new Intrinsic("Gunnery"), new Intrinsic("Engineering"), new Intrinsic("Command")];
+}
 
     setAmps(items: Item[]) {
         this.Amp = items;
