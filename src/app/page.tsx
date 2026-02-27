@@ -3,12 +3,13 @@ import ItemList from "@/components/Items/ItemList";
 import Topbar from "@/components/Topbar/Topbar";
 import { TotalMastery } from "@/classes/TotalMastery";
 import { useEffect, useRef, useState } from "react";
-import { Button, Image, Tab, Tabs, ToastProvider } from "@heroui/react";
+import { Image, Tab, Tabs, ToastProvider } from "@heroui/react";
 import NodeList from "@/components/Starchart/NodeList";
 import { MapNode } from "@/classes/MapNode";
 import { Milestones } from "@/classes/Milestones";
 import IntrinsicsList from "@/components/Intrinsics/IntrinsicsList";
 import {addToast} from "@heroui/react";
+import { mergeTotalMastery } from "@/components/Items/mergeTotalMastery";
 
 export default function Home() {
   const [allMasteryData, setAllMasteryData] = useState<TotalMastery>(() => new TotalMastery);
@@ -22,7 +23,8 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch("/api/loadItems");
+      // const res = await fetch("/api/loadItems");
+      const res = await fetch("/api/loadBaseSave")
       const data = await res.json();
       const allMastery = TotalMastery.fromJSON(data);
       setAllMasteryData(allMastery);
@@ -132,7 +134,8 @@ export default function Home() {
 
   const clearLocalStorage = async () => {
     localStorage.removeItem("allMasteryData");
-    const res = await fetch("/api/loadItems");
+    // const res = await fetch("/api/loadItems");
+    const res = await fetch("/api/loadBaseSave");
     const data = await res.json();
     const allMastery = TotalMastery.fromJSON(data);
     setAllMasteryData(allMastery);
@@ -223,6 +226,20 @@ export default function Home() {
     setAllMasteryData(newData);
     setTotalAffinity(newData.getTotalAffinity());
   }
+  
+  // currently not accessible by the user
+  const updateItemsList = async() => {
+      const res = await fetch("/api/loadBaseSave");
+      const data = await res.json();
+      const newMastery = TotalMastery.fromJSON(data);
+      setAllMasteryData(mergeTotalMastery(allMasteryData,newMastery));
+      addToast({
+      title: "Success",
+      description:"Updated save data to the current patch",
+      color: "success",
+    })
+  }
+
   //this is to be changed into a proper skeleton
   if (!isLoaded) return (
     <main className="h-dvh flex flex-col bg-linear-to-b from-primary-700 to-[#922d3b] text-white select-none">
