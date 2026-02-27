@@ -15,7 +15,7 @@ Future plans:
 * Search/filter lists <span style="color:yellow; font-weight: bold">+</span>
 * Changing the way a new save is created <span style="color:green; font-weight: bold">✓</span>
 * Updating old save to new version <span style="color:green; font-weight: bold">✓</span>
-* Mobile version support
+* Mobile version <span style="color:grey">(Works okay on mobile - further improvements are planned)</span>
 * Show information about the cost of specific items, links to wiki
 * World status 
 ## 
