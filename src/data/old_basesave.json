@@ -1446,15 +1446,6 @@
       "imageName": "kronsh-a3ddae365e.png"
     },
     {
-      "name": "Kuva Ghoulsaw",
-      "masteryReq": 13,
-      "currentLevel": 0,
-      "maxLevelCap": 40,
-      "category": "Melee",
-      "type": "Melee",
-      "imageName": "kuva-ghoulsaw-9bd7ec9493.png"
-    },
-    {
       "name": "Kuva Shildeg",
       "masteryReq": 13,
       "currentLevel": 0,
@@ -3000,15 +2991,6 @@
       "imageName": "coda-bassocyst-90c0e70718.png"
     },
     {
-      "name": "Coda Bubonico",
-      "masteryReq": 17,
-      "currentLevel": 0,
-      "maxLevelCap": 40,
-      "category": "Primary",
-      "type": "Rifle",
-      "imageName": "coda-bubonico-354ba9ee4a.png"
-    },
-    {
       "name": "Coda Hema",
       "masteryReq": 17,
       "currentLevel": 0,
@@ -3133,15 +3115,6 @@
       "category": "Primary",
       "type": "Rifle",
       "imageName": "efv-5-jupiter-e993642339.png"
-    },
-    {
-      "name": "Enkaus",
-      "masteryReq": 12,
-      "currentLevel": 0,
-      "maxLevelCap": 30,
-      "category": "Primary",
-      "type": "Rifle",
-      "imageName": "enkaus-0ffed0644c.png"
     },
     {
       "name": "Evensong",
@@ -4159,15 +4132,6 @@
       "category": "Primary",
       "type": "Rifle",
       "imageName": "tenet-glaxion-7236ec1e72.png"
-    },
-    {
-      "name": "Tenet Quanta",
-      "masteryReq": 16,
-      "currentLevel": 0,
-      "maxLevelCap": 40,
-      "category": "Primary",
-      "type": "Rifle",
-      "imageName": "tenet-quanta-44e361e0ec.png"
     },
     {
       "name": "Tenet Tetra",
@@ -6356,15 +6320,6 @@
       "imageName": "excalibur-umbra-d421af56c1.png"
     },
     {
-      "name": "Follie",
-      "masteryReq": 0,
-      "currentLevel": 0,
-      "maxLevelCap": 30,
-      "category": "Warframes",
-      "type": "Warframe",
-      "imageName": "follie-2c6d732813.png"
-    },
-    {
       "name": "Frost",
       "masteryReq": 0,
       "currentLevel": 0,
@@ -7178,2256 +7133,2240 @@
   "Nodes": [
     {
       "name": "Abaddon",
-      "systemIndex": 12,
       "systemName": "Europa",
+      "systemIndex": 12,
       "exp": 138,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Acheron",
-      "systemIndex": 8,
       "systemName": "Pluto",
+      "systemIndex": 8,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Adaro",
-      "systemIndex": 11,
       "systemName": "Sedna",
+      "systemIndex": 11,
       "exp": 177,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Adrastea",
-      "systemIndex": 4,
       "systemName": "Jupiter",
+      "systemIndex": 4,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Akkad",
-      "systemIndex": 10,
       "systemName": "Eris",
+      "systemIndex": 10,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Alator",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Amalthea",
-      "systemIndex": 4,
       "systemName": "Jupiter",
+      "systemIndex": 4,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Amarna",
-      "systemIndex": 11,
       "systemName": "Sedna",
+      "systemIndex": 11,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Ananke",
-      "systemIndex": 4,
       "systemName": "Jupiter",
+      "systemIndex": 4,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Ani",
-      "systemIndex": 14,
       "systemName": "Void",
+      "systemIndex": 14,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Anthe",
-      "systemIndex": 5,
       "systemName": "Saturn",
+      "systemIndex": 5,
       "exp": 55,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Aphrodite",
-      "systemIndex": 1,
       "systemName": "Venus",
+      "systemIndex": 1,
       "exp": 18,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Apollo",
-      "systemIndex": 17,
       "systemName": "Lua",
+      "systemIndex": 17,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Apollodorus",
-      "systemIndex": 0,
       "systemName": "Mercury",
+      "systemIndex": 0,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Ara",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Ares",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Ariel",
-      "systemIndex": 6,
       "systemName": "Uranus",
+      "systemIndex": 6,
       "exp": 69,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Armaros",
-      "systemIndex": 12,
       "systemName": "Europa",
+      "systemIndex": 12,
       "exp": 138,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Armatus",
-      "systemIndex": 16,
       "systemName": "Deimos",
+      "systemIndex": 16,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Arval",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Assassinate: H-09 Tank",
-      "systemIndex": 23,
       "systemName": "Höllvania",
+      "systemIndex": 23,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Assur",
-      "systemIndex": 6,
       "systemName": "Uranus",
+      "systemIndex": 6,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Aten",
-      "systemIndex": 14,
       "systemName": "Void",
+      "systemIndex": 14,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Augustus",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Baal",
-      "systemIndex": 12,
       "systemName": "Europa",
+      "systemIndex": 12,
       "exp": 138,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Belenus",
-      "systemIndex": 14,
       "systemName": "Void",
+      "systemIndex": 14,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Berehynia",
-      "systemIndex": 11,
       "systemName": "Sedna",
+      "systemIndex": 11,
       "exp": 50,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Bode",
-      "systemIndex": 9,
       "systemName": "Ceres",
+      "systemIndex": 9,
       "exp": 163,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Boethius",
-      "systemIndex": 0,
       "systemName": "Mercury",
+      "systemIndex": 0,
       "exp": 3,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Brugia",
-      "systemIndex": 10,
       "systemName": "Eris",
+      "systemIndex": 10,
       "exp": 279,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Caelus",
-      "systemIndex": 6,
       "systemName": "Uranus",
+      "systemIndex": 6,
       "exp": 69,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Caliban",
-      "systemIndex": 6,
       "systemName": "Uranus",
+      "systemIndex": 6,
       "exp": 69,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Callisto",
-      "systemIndex": 4,
       "systemName": "Jupiter",
+      "systemIndex": 4,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Caloris",
-      "systemIndex": 0,
       "systemName": "Mercury",
+      "systemIndex": 0,
       "exp": 3,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Calypso",
-      "systemIndex": 5,
       "systemName": "Saturn",
+      "systemIndex": 5,
       "exp": 55,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Cambion Drift",
-      "systemIndex": 16,
       "systemName": "Deimos",
+      "systemIndex": 16,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Cambire",
-      "systemIndex": 16,
       "systemName": "Deimos",
+      "systemIndex": 16,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Cambria",
-      "systemIndex": 2,
       "systemName": "Earth",
+      "systemIndex": 2,
       "exp": 24,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Cameria",
-      "systemIndex": 4,
       "systemName": "Jupiter",
+      "systemIndex": 4,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Caracol",
-      "systemIndex": 5,
       "systemName": "Saturn",
+      "systemIndex": 5,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Carme",
-      "systemIndex": 4,
       "systemName": "Jupiter",
+      "systemIndex": 4,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Carpo",
-      "systemIndex": 4,
       "systemName": "Jupiter",
+      "systemIndex": 4,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Cassini",
-      "systemIndex": 5,
       "systemName": "Saturn",
+      "systemIndex": 5,
       "exp": 55,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Casta",
-      "systemIndex": 9,
       "systemName": "Ceres",
+      "systemIndex": 9,
       "exp": 163,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Cerberus",
-      "systemIndex": 8,
       "systemName": "Pluto",
+      "systemIndex": 8,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Cervantes",
-      "systemIndex": 2,
       "systemName": "Earth",
+      "systemIndex": 2,
       "exp": 24,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Charybdis",
-      "systemIndex": 11,
       "systemName": "Sedna",
+      "systemIndex": 11,
       "exp": 177,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Cholistan",
-      "systemIndex": 12,
       "systemName": "Europa",
+      "systemIndex": 12,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Cinxia",
-      "systemIndex": 9,
       "systemName": "Ceres",
+      "systemIndex": 9,
       "exp": 163,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Circulus",
-      "systemIndex": 17,
       "systemName": "Lua",
+      "systemIndex": 17,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Coba",
-      "systemIndex": 2,
       "systemName": "Earth",
+      "systemIndex": 2,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Copernicus",
-      "systemIndex": 17,
       "systemName": "Lua",
+      "systemIndex": 17,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Cressida",
-      "systemIndex": 6,
       "systemName": "Uranus",
+      "systemIndex": 6,
       "exp": 69,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Cypress",
-      "systemIndex": 8,
       "systemName": "Pluto",
+      "systemIndex": 8,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Cytherean",
-      "systemIndex": 1,
       "systemName": "Venus",
+      "systemIndex": 1,
       "exp": 18,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Dakata",
-      "systemIndex": 18,
       "systemName": "Kuva Fortress",
+      "systemIndex": 18,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Descend",
-      "systemIndex": 24,
       "systemName": "Dark Refractory, Deimos",
+      "systemIndex": 24,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Descend From Lyon's Sanctuary",
-      "systemIndex": 24,
       "systemName": "Dark Refractory, Deimos",
+      "systemIndex": 24,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Descend From Marie's Sanctuary",
-      "systemIndex": 24,
       "systemName": "Dark Refractory, Deimos",
+      "systemIndex": 24,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Desdemona",
-      "systemIndex": 6,
       "systemName": "Uranus",
+      "systemIndex": 6,
       "exp": 69,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Despina",
-      "systemIndex": 7,
       "systemName": "Neptune",
+      "systemIndex": 7,
       "exp": 52,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Dione",
-      "systemIndex": 5,
       "systemName": "Saturn",
+      "systemIndex": 5,
       "exp": 55,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Dirus",
-      "systemIndex": 16,
       "systemName": "Deimos",
+      "systemIndex": 16,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Draco",
-      "systemIndex": 9,
       "systemName": "Ceres",
+      "systemIndex": 9,
       "exp": 163,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "E Gate",
-      "systemIndex": 1,
       "systemName": "Venus",
+      "systemIndex": 1,
       "exp": 18,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "E Prime",
-      "systemIndex": 2,
       "systemName": "Earth",
+      "systemIndex": 2,
       "exp": 24,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Effervo",
-      "systemIndex": 16,
       "systemName": "Deimos",
+      "systemIndex": 16,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Elara",
-      "systemIndex": 4,
       "systemName": "Jupiter",
+      "systemIndex": 4,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Elion",
-      "systemIndex": 0,
       "systemName": "Mercury",
+      "systemIndex": 0,
       "exp": 3,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Enceladus",
-      "systemIndex": 5,
       "systemName": "Saturn",
+      "systemIndex": 5,
       "exp": 49,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Erpo",
-      "systemIndex": 2,
       "systemName": "Earth",
+      "systemIndex": 2,
       "exp": 24,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Eurasia",
-      "systemIndex": 2,
       "systemName": "Earth",
+      "systemIndex": 2,
       "exp": 24,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Everest",
-      "systemIndex": 2,
       "systemName": "Earth",
+      "systemIndex": 2,
       "exp": 24,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Everview Arc",
-      "systemIndex": 21,
       "systemName": "Zariman",
+      "systemIndex": 21,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Exequias",
-      "systemIndex": 16,
       "systemName": "Deimos",
+      "systemIndex": 16,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Exta",
-      "systemIndex": 9,
       "systemName": "Ceres",
+      "systemIndex": 9,
       "exp": 163,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Exterminate: Scaldra",
-      "systemIndex": 23,
       "systemName": "Höllvania",
+      "systemIndex": 23,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Exterminate: Techrot",
-      "systemIndex": 23,
       "systemName": "Höllvania",
+      "systemIndex": 23,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Faceoff: Single Squad",
-      "systemIndex": 23,
       "systemName": "Höllvania",
+      "systemIndex": 23,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Faceoff: Squad Vs Squad",
-      "systemIndex": 23,
       "systemName": "Höllvania",
+      "systemIndex": 23,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Formido",
-      "systemIndex": 16,
       "systemName": "Deimos",
+      "systemIndex": 16,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Fossa",
-      "systemIndex": 1,
       "systemName": "Venus",
+      "systemIndex": 1,
       "exp": 41,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Gabii",
-      "systemIndex": 9,
       "systemName": "Ceres",
+      "systemIndex": 9,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Gaia",
-      "systemIndex": 2,
       "systemName": "Earth",
+      "systemIndex": 2,
       "exp": 20,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Galatea",
-      "systemIndex": 7,
       "systemName": "Neptune",
+      "systemIndex": 7,
       "exp": 52,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Galilea",
-      "systemIndex": 4,
       "systemName": "Jupiter",
+      "systemIndex": 4,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Ganymede",
-      "systemIndex": 4,
       "systemName": "Jupiter",
+      "systemIndex": 4,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Garus",
-      "systemIndex": 18,
       "systemName": "Kuva Fortress",
+      "systemIndex": 18,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Gradivus",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 45,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Grimaldi",
-      "systemIndex": 17,
       "systemName": "Lua",
+      "systemIndex": 17,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Gulliver",
-      "systemIndex": 15,
       "systemName": "Phobos",
+      "systemIndex": 15,
       "exp": 157,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Hades",
-      "systemIndex": 8,
       "systemName": "Pluto",
+      "systemIndex": 8,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Halako Perimeter",
-      "systemIndex": 21,
       "systemName": "Zariman",
+      "systemIndex": 21,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Helene",
-      "systemIndex": 5,
       "systemName": "Saturn",
+      "systemIndex": 5,
       "exp": 55,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Hell-Scrub: Scaldra",
-      "systemIndex": 23,
       "systemName": "Höllvania",
+      "systemIndex": 23,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Hell-Scrub: Techrot",
-      "systemIndex": 23,
       "systemName": "Höllvania",
+      "systemIndex": 23,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Hellas",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Hepit",
-      "systemIndex": 14,
       "systemName": "Void",
+      "systemIndex": 14,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Hieracon",
-      "systemIndex": 8,
       "systemName": "Pluto",
+      "systemIndex": 8,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Horend",
-      "systemIndex": 16,
       "systemName": "Deimos",
+      "systemIndex": 16,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Hydra",
-      "systemIndex": 8,
       "systemName": "Pluto",
+      "systemIndex": 8,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Hydron",
-      "systemIndex": 11,
       "systemName": "Sedna",
+      "systemIndex": 11,
       "exp": 177,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Hyf",
-      "systemIndex": 16,
       "systemName": "Deimos",
+      "systemIndex": 16,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Iliad",
-      "systemIndex": 15,
       "systemName": "Phobos",
+      "systemIndex": 15,
       "exp": 100,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Io",
-      "systemIndex": 4,
       "systemName": "Jupiter",
+      "systemIndex": 4,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Ishtar",
-      "systemIndex": 1,
       "systemName": "Venus",
+      "systemIndex": 1,
       "exp": 24,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Isos",
-      "systemIndex": 10,
       "systemName": "Eris",
+      "systemIndex": 10,
       "exp": 279,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Kadesh",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Kala-Azar",
-      "systemIndex": 10,
       "systemName": "Eris",
+      "systemIndex": 10,
       "exp": 279,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Kappa",
-      "systemIndex": 11,
       "systemName": "Sedna",
+      "systemIndex": 11,
       "exp": 177,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Keeler",
-      "systemIndex": 5,
       "systemName": "Saturn",
+      "systemIndex": 5,
       "exp": 55,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Kelashin",
-      "systemIndex": 7,
       "systemName": "Neptune",
+      "systemIndex": 7,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Kelpie",
-      "systemIndex": 11,
       "systemName": "Sedna",
+      "systemIndex": 11,
       "exp": 177,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Kepler",
-      "systemIndex": 15,
       "systemName": "Phobos",
+      "systemIndex": 15,
       "exp": 157,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Ker",
-      "systemIndex": 9,
       "systemName": "Ceres",
+      "systemIndex": 9,
       "exp": 163,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Kiliken",
-      "systemIndex": 1,
       "systemName": "Venus",
+      "systemIndex": 1,
       "exp": 18,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Kiste",
-      "systemIndex": 9,
       "systemName": "Ceres",
+      "systemIndex": 9,
       "exp": 163,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Kokabiel",
-      "systemIndex": 12,
       "systemName": "Europa",
+      "systemIndex": 12,
       "exp": 138,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Koro",
-      "systemIndex": 18,
       "systemName": "Kuva Fortress",
+      "systemIndex": 18,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Laomedeia",
-      "systemIndex": 7,
       "systemName": "Neptune",
+      "systemIndex": 7,
       "exp": 52,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Lares",
-      "systemIndex": 0,
       "systemName": "Mercury",
+      "systemIndex": 0,
       "exp": 3,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Larissa",
-      "systemIndex": 7,
       "systemName": "Neptune",
+      "systemIndex": 7,
       "exp": 52,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Larzac",
-      "systemIndex": 12,
       "systemName": "Europa",
+      "systemIndex": 12,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Legacyte Harvest",
-      "systemIndex": 23,
       "systemName": "Höllvania",
+      "systemIndex": 23,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Lex",
-      "systemIndex": 9,
       "systemName": "Ceres",
+      "systemIndex": 9,
       "exp": 163,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Linea",
-      "systemIndex": 1,
       "systemName": "Venus",
+      "systemIndex": 1,
       "exp": 18,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Lith",
-      "systemIndex": 2,
       "systemName": "Earth",
+      "systemIndex": 2,
       "exp": 24,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Ludi",
-      "systemIndex": 9,
       "systemName": "Ceres",
+      "systemIndex": 9,
       "exp": 163,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "M Prime",
-      "systemIndex": 0,
       "systemName": "Mercury",
+      "systemIndex": 0,
       "exp": 3,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Magnacidium",
-      "systemIndex": 16,
       "systemName": "Deimos",
+      "systemIndex": 16,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Malva",
-      "systemIndex": 1,
       "systemName": "Venus",
+      "systemIndex": 1,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Mantle",
-      "systemIndex": 2,
       "systemName": "Earth",
+      "systemIndex": 2,
       "exp": 24,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Marduk",
-      "systemIndex": 14,
       "systemName": "Void",
+      "systemIndex": 14,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Mariana",
-      "systemIndex": 2,
       "systemName": "Earth",
+      "systemIndex": 2,
       "exp": 24,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Marid",
-      "systemIndex": 11,
       "systemName": "Sedna",
+      "systemIndex": 11,
       "exp": 177,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Martialis",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Memphis",
-      "systemIndex": 15,
       "systemName": "Phobos",
+      "systemIndex": 15,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Merrow",
-      "systemIndex": 11,
       "systemName": "Sedna",
+      "systemIndex": 11,
       "exp": 100,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Metis",
-      "systemIndex": 4,
       "systemName": "Jupiter",
+      "systemIndex": 4,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Minthe",
-      "systemIndex": 8,
       "systemName": "Pluto",
+      "systemIndex": 8,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Mithra",
-      "systemIndex": 14,
       "systemName": "Void",
+      "systemIndex": 14,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Monolith",
-      "systemIndex": 15,
       "systemName": "Phobos",
+      "systemIndex": 15,
       "exp": 157,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Montes",
-      "systemIndex": 1,
       "systemName": "Venus",
+      "systemIndex": 1,
       "exp": 18,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Morax",
-      "systemIndex": 12,
       "systemName": "Europa",
+      "systemIndex": 12,
       "exp": 138,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Mot",
-      "systemIndex": 14,
       "systemName": "Void",
+      "systemIndex": 14,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Munio",
-      "systemIndex": 16,
       "systemName": "Deimos",
+      "systemIndex": 16,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Naamah",
-      "systemIndex": 12,
       "systemName": "Europa",
+      "systemIndex": 12,
       "exp": 138,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Nabuk",
-      "systemIndex": 18,
       "systemName": "Kuva Fortress",
+      "systemIndex": 18,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Naeglar",
-      "systemIndex": 10,
       "systemName": "Eris",
+      "systemIndex": 10,
       "exp": 279,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Naga",
-      "systemIndex": 11,
       "systemName": "Sedna",
+      "systemIndex": 11,
       "exp": 177,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Nakki",
-      "systemIndex": 11,
       "systemName": "Sedna",
+      "systemIndex": 11,
       "exp": 177,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Narcissus",
-      "systemIndex": 8,
       "systemName": "Pluto",
+      "systemIndex": 8,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Nereid",
-      "systemIndex": 7,
       "systemName": "Neptune",
+      "systemIndex": 7,
       "exp": 52,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Neso",
-      "systemIndex": 7,
       "systemName": "Neptune",
+      "systemIndex": 7,
       "exp": 52,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Nex",
-      "systemIndex": 16,
       "systemName": "Deimos",
+      "systemIndex": 16,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Nimus",
-      "systemIndex": 10,
       "systemName": "Eris",
+      "systemIndex": 10,
       "exp": 279,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Numa",
-      "systemIndex": 5,
       "systemName": "Saturn",
+      "systemIndex": 5,
       "exp": 55,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Nuovo",
-      "systemIndex": 9,
       "systemName": "Ceres",
+      "systemIndex": 9,
       "exp": 163,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Oceanum",
-      "systemIndex": 8,
       "systemName": "Pluto",
+      "systemIndex": 8,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Odin",
-      "systemIndex": 0,
       "systemName": "Mercury",
+      "systemIndex": 0,
       "exp": 3,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Oestrus",
-      "systemIndex": 10,
       "systemName": "Eris",
+      "systemIndex": 10,
       "exp": 279,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Olympus",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Ophelia",
-      "systemIndex": 6,
       "systemName": "Uranus",
+      "systemIndex": 6,
       "exp": 69,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Orb Vallis",
-      "systemIndex": 1,
       "systemName": "Venus",
+      "systemIndex": 1,
       "exp": 24,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Orias",
-      "systemIndex": 12,
       "systemName": "Europa",
+      "systemIndex": 12,
       "exp": 138,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Oro",
-      "systemIndex": 2,
       "systemName": "Earth",
+      "systemIndex": 2,
       "exp": 24,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Oro Works",
-      "systemIndex": 21,
       "systemName": "Zariman",
+      "systemIndex": 21,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Ose",
-      "systemIndex": 12,
       "systemName": "Europa",
+      "systemIndex": 12,
       "exp": 138,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Outer Terminus",
-      "systemIndex": 8,
       "systemName": "Pluto",
+      "systemIndex": 8,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Oxomoco",
-      "systemIndex": 14,
       "systemName": "Void",
+      "systemIndex": 14,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Pacific",
-      "systemIndex": 2,
       "systemName": "Earth",
+      "systemIndex": 2,
       "exp": 24,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Pago",
-      "systemIndex": 18,
       "systemName": "Kuva Fortress",
+      "systemIndex": 18,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Paimon",
-      "systemIndex": 12,
       "systemName": "Europa",
+      "systemIndex": 12,
       "exp": 138,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Pallas",
-      "systemIndex": 9,
       "systemName": "Ceres",
+      "systemIndex": 9,
       "exp": 163,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Palus",
-      "systemIndex": 8,
       "systemName": "Pluto",
+      "systemIndex": 8,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Pandora",
-      "systemIndex": 5,
       "systemName": "Saturn",
+      "systemIndex": 5,
       "exp": 55,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Pantheon",
-      "systemIndex": 0,
       "systemName": "Mercury",
+      "systemIndex": 0,
       "exp": 3,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Pavlov",
-      "systemIndex": 17,
       "systemName": "Lua",
+      "systemIndex": 17,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Persto",
-      "systemIndex": 16,
       "systemName": "Deimos",
+      "systemIndex": 16,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Phlegyas",
-      "systemIndex": 16,
       "systemName": "Deimos",
+      "systemIndex": 16,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Piscinas",
-      "systemIndex": 5,
       "systemName": "Saturn",
+      "systemIndex": 5,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Plains Of Eidolon",
-      "systemIndex": 2,
       "systemName": "Earth",
+      "systemIndex": 2,
       "exp": 24,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Plato",
-      "systemIndex": 17,
       "systemName": "Lua",
+      "systemIndex": 17,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Proteus",
-      "systemIndex": 7,
       "systemName": "Neptune",
+      "systemIndex": 7,
       "exp": 52,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Psamathe",
-      "systemIndex": 7,
       "systemName": "Neptune",
+      "systemIndex": 7,
       "exp": 52,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Puck",
-      "systemIndex": 6,
       "systemName": "Uranus",
+      "systemIndex": 6,
       "exp": 44,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Recall: Dactolyst",
-      "systemIndex": 24,
       "systemName": "Dark Refractory, Deimos",
+      "systemIndex": 24,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Recall: Hunhullus",
-      "systemIndex": 24,
       "systemName": "Dark Refractory, Deimos",
+      "systemIndex": 24,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Recall: Vanguard",
-      "systemIndex": 24,
       "systemName": "Dark Refractory, Deimos",
+      "systemIndex": 24,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Regna",
-      "systemIndex": 8,
       "systemName": "Pluto",
+      "systemIndex": 8,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Rhea",
-      "systemIndex": 5,
       "systemName": "Saturn",
+      "systemIndex": 5,
       "exp": 55,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Roathe's Oblivion",
-      "systemIndex": 24,
       "systemName": "Dark Refractory, Deimos",
+      "systemIndex": 24,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Roche",
-      "systemIndex": 15,
       "systemName": "Phobos",
+      "systemIndex": 15,
       "exp": 157,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Romula",
-      "systemIndex": 1,
       "systemName": "Venus",
+      "systemIndex": 1,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Rosalind",
-      "systemIndex": 6,
       "systemName": "Uranus",
+      "systemIndex": 6,
       "exp": 69,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Rotuma",
-      "systemIndex": 18,
       "systemName": "Kuva Fortress",
+      "systemIndex": 18,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Rusalka",
-      "systemIndex": 11,
       "systemName": "Sedna",
+      "systemIndex": 11,
       "exp": 177,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Salacia",
-      "systemIndex": 7,
       "systemName": "Neptune",
+      "systemIndex": 7,
       "exp": 52,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Sangeru",
-      "systemIndex": 11,
       "systemName": "Sedna",
+      "systemIndex": 11,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Sao",
-      "systemIndex": 7,
       "systemName": "Neptune",
+      "systemIndex": 7,
       "exp": 52,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Saxis",
-      "systemIndex": 10,
       "systemName": "Eris",
+      "systemIndex": 10,
       "exp": 279,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Saya's Visions",
-      "systemIndex": 2,
       "systemName": "Earth",
+      "systemIndex": 2,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Sechura",
-      "systemIndex": 8,
       "systemName": "Pluto",
+      "systemIndex": 8,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Seimeni",
-      "systemIndex": 9,
       "systemName": "Ceres",
+      "systemIndex": 9,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Selkie",
-      "systemIndex": 11,
       "systemName": "Sedna",
+      "systemIndex": 11,
       "exp": 177,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Sharpless",
-      "systemIndex": 15,
       "systemName": "Phobos",
+      "systemIndex": 15,
       "exp": 157,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Shklovsky",
-      "systemIndex": 15,
       "systemName": "Phobos",
+      "systemIndex": 15,
       "exp": 157,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Sinai",
-      "systemIndex": 4,
       "systemName": "Jupiter",
+      "systemIndex": 4,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Skyresh",
-      "systemIndex": 15,
       "systemName": "Phobos",
+      "systemIndex": 15,
       "exp": 157,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Solium",
-      "systemIndex": 10,
       "systemName": "Eris",
+      "systemIndex": 10,
       "exp": 279,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Solstice Square",
-      "systemIndex": 23,
       "systemName": "Höllvania",
+      "systemIndex": 23,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Sorath",
-      "systemIndex": 12,
       "systemName": "Europa",
+      "systemIndex": 12,
       "exp": 138,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Spear",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Stephano",
-      "systemIndex": 6,
       "systemName": "Uranus",
+      "systemIndex": 6,
       "exp": 69,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Stickney",
-      "systemIndex": 15,
       "systemName": "Phobos",
+      "systemIndex": 15,
       "exp": 157,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Stöfler",
-      "systemIndex": 17,
       "systemName": "Lua",
+      "systemIndex": 17,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Stribog",
-      "systemIndex": 14,
       "systemName": "Void",
+      "systemIndex": 14,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Suisei",
-      "systemIndex": 0,
       "systemName": "Mercury",
+      "systemIndex": 0,
       "exp": 3,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Sycorax",
-      "systemIndex": 6,
       "systemName": "Uranus",
+      "systemIndex": 6,
       "exp": 69,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Syrtis",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Tamu",
-      "systemIndex": 18,
       "systemName": "Kuva Fortress",
+      "systemIndex": 18,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Taranis",
-      "systemIndex": 14,
       "systemName": "Void",
+      "systemIndex": 14,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Taveuni",
-      "systemIndex": 18,
       "systemName": "Kuva Fortress",
+      "systemIndex": 18,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Telesto",
-      "systemIndex": 5,
       "systemName": "Saturn",
+      "systemIndex": 5,
       "exp": 55,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Terminus",
-      "systemIndex": 0,
       "systemName": "Mercury",
+      "systemIndex": 0,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Terrorem",
-      "systemIndex": 16,
       "systemName": "Deimos",
+      "systemIndex": 16,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Teshub",
-      "systemIndex": 14,
       "systemName": "Void",
+      "systemIndex": 14,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Tessera",
-      "systemIndex": 1,
       "systemName": "Venus",
+      "systemIndex": 1,
       "exp": 18,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Tethys",
-      "systemIndex": 5,
       "systemName": "Saturn",
+      "systemIndex": 5,
       "exp": 55,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Tharsis",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "The Circuit",
-      "systemIndex": 22,
       "systemName": "Duviri",
+      "systemIndex": 22,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "The Duviri Experience",
-      "systemIndex": 22,
       "systemName": "Duviri",
+      "systemIndex": 22,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "The Greenway",
-      "systemIndex": 21,
       "systemName": "Zariman",
-      "exp": 0,
-      "isDone": false,
-      "steelPathDone": false
-    },
-    {
-      "name": "The Guilty",
-      "systemIndex": 24,
-      "systemName": "Dark Refractory, Deimos",
+      "systemIndex": 21,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "The Lone Story",
-      "systemIndex": 22,
       "systemName": "Duviri",
+      "systemIndex": 22,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "The Ropalolyst",
-      "systemIndex": 4,
       "systemName": "Jupiter",
+      "systemIndex": 4,
       "exp": 55,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Thebe",
-      "systemIndex": 4,
       "systemName": "Jupiter",
+      "systemIndex": 4,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Themisto",
-      "systemIndex": 4,
       "systemName": "Jupiter",
+      "systemIndex": 4,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Thon",
-      "systemIndex": 9,
       "systemName": "Ceres",
+      "systemIndex": 9,
       "exp": 163,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Tikal",
-      "systemIndex": 2,
       "systemName": "Earth",
+      "systemIndex": 2,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Titan",
-      "systemIndex": 5,
       "systemName": "Saturn",
+      "systemIndex": 5,
       "exp": 55,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Titania",
-      "systemIndex": 6,
       "systemName": "Uranus",
+      "systemIndex": 6,
       "exp": 69,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Tiwaz",
-      "systemIndex": 14,
       "systemName": "Void",
+      "systemIndex": 14,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Tolstoj",
-      "systemIndex": 0,
       "systemName": "Mercury",
+      "systemIndex": 0,
       "exp": 25,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Triton",
-      "systemIndex": 7,
       "systemName": "Neptune",
+      "systemIndex": 7,
       "exp": 52,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Tuvul Commons",
-      "systemIndex": 21,
       "systemName": "Zariman",
+      "systemIndex": 21,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Tyana Pass",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 18,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Tycho",
-      "systemIndex": 17,
       "systemName": "Lua",
+      "systemIndex": 17,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Ukko",
-      "systemIndex": 14,
       "systemName": "Void",
+      "systemIndex": 14,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Ultor",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Umbriel",
-      "systemIndex": 6,
       "systemName": "Uranus",
+      "systemIndex": 6,
       "exp": 69,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Unda",
-      "systemIndex": 1,
       "systemName": "Venus",
+      "systemIndex": 1,
       "exp": 18,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Ur",
-      "systemIndex": 6,
       "systemName": "Uranus",
+      "systemIndex": 6,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "V Prime",
-      "systemIndex": 1,
       "systemName": "Venus",
+      "systemIndex": 1,
       "exp": 18,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Valac",
-      "systemIndex": 12,
       "systemName": "Europa",
+      "systemIndex": 12,
       "exp": 138,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Valefor",
-      "systemIndex": 12,
       "systemName": "Europa",
+      "systemIndex": 12,
       "exp": 138,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Vallis",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Venera",
-      "systemIndex": 1,
       "systemName": "Venus",
-      "exp": 18,
-      "isDone": false,
-      "steelPathDone": false
-    },
-    {
-      "name": "Vesper Relay",
       "systemIndex": 1,
-      "systemName": "Venus",
       "exp": 18,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Vodyanoi",
-      "systemIndex": 11,
       "systemName": "Sedna",
+      "systemIndex": 11,
       "exp": 177,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Wahiba",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "War",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 51,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Xini",
-      "systemIndex": 10,
       "systemName": "Eris",
+      "systemIndex": 10,
       "exp": 279,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Yam",
-      "systemIndex": 11,
       "systemName": "Sedna",
+      "systemIndex": 11,
       "exp": 177,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Yursa",
-      "systemIndex": 7,
       "systemName": "Neptune",
+      "systemIndex": 7,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Yuvarium",
-      "systemIndex": 17,
       "systemName": "Lua",
+      "systemIndex": 17,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Zabala",
-      "systemIndex": 10,
       "systemName": "Eris",
+      "systemIndex": 10,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Zeipel",
-      "systemIndex": 17,
       "systemName": "Lua",
+      "systemIndex": 17,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Zeugma",
-      "systemIndex": 15,
       "systemName": "Phobos",
+      "systemIndex": 15,
       "exp": 0,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Mercury Junction",
-      "systemIndex": 1,
       "systemName": "Venus",
+      "systemIndex": 1,
       "exp": 1000,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Mars Junction",
-      "systemIndex": 2,
       "systemName": "Earth",
+      "systemIndex": 2,
       "exp": 1000,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Venus Junction",
-      "systemIndex": 2,
       "systemName": "Earth",
+      "systemIndex": 2,
       "exp": 1000,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Ceres Junction",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 1000,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Phobos Junction",
-      "systemIndex": 3,
       "systemName": "Mars",
+      "systemIndex": 3,
       "exp": 1000,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Jupiter Junction",
-      "systemIndex": 16,
       "systemName": "Deimos",
+      "systemIndex": 16,
       "exp": 1000,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Europa Junction",
-      "systemIndex": 4,
       "systemName": "Jupiter",
+      "systemIndex": 4,
       "exp": 1000,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Saturn Junction",
-      "systemIndex": 4,
       "systemName": "Jupiter",
+      "systemIndex": 4,
       "exp": 1000,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Uranus Junction",
-      "systemIndex": 5,
       "systemName": "Saturn",
+      "systemIndex": 5,
       "exp": 1000,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Neptune Junction",
-      "systemIndex": 6,
       "systemName": "Uranus",
+      "systemIndex": 6,
       "exp": 1000,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Pluto Junction",
-      "systemIndex": 7,
       "systemName": "Neptune",
+      "systemIndex": 7,
       "exp": 1000,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Eris Junction",
-      "systemIndex": 8,
       "systemName": "Pluto",
+      "systemIndex": 8,
       "exp": 1000,
       "isDone": false,
       "steelPathDone": false
     },
     {
       "name": "Sedna Junction",
-      "systemIndex": 7,
       "systemName": "Neptune",
+      "systemIndex": 7,
       "exp": 1000,
       "isDone": false,
       "steelPathDone": false
