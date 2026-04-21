@@ -23,8 +23,8 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchData() {
-      // const res = await fetch("/api/loadItems");
-      const res = await fetch("/api/loadBaseSave")
+      const res = await fetch("/api/loadItems");
+      // const res = await fetch("/api/loadBaseSave")
       const data = await res.json();
       const allMastery = TotalMastery.fromJSON(data);
       setAllMasteryData(allMastery);
@@ -93,7 +93,7 @@ export default function Home() {
       console.error("No data to save to localStorage");
     }
   }
-
+  //No longer used, kept for a few next updates in case I want it to return anywhere
   const loadFromLocalStorage = () => {
     const data = localStorage.getItem("allMasteryData");
 
@@ -134,8 +134,8 @@ export default function Home() {
 
   const clearLocalStorage = async () => {
     localStorage.removeItem("allMasteryData");
-    // const res = await fetch("/api/loadItems");
-    const res = await fetch("/api/loadBaseSave");
+    const res = await fetch("/api/loadItems");
+    // const res = await fetch("/api/loadBaseSave");
     const data = await res.json();
     const allMastery = TotalMastery.fromJSON(data);
     setAllMasteryData(allMastery);
@@ -227,9 +227,8 @@ export default function Home() {
     setTotalAffinity(newData.getTotalAffinity());
   }
   
-  // currently not accessible by the user
   const updateItemsList = async() => {
-      const res = await fetch("/api/loadBaseSave");
+      const res = await fetch("/api/loadItems");
       const data = await res.json();
       const newMastery = TotalMastery.fromJSON(data);
       setAllMasteryData(mergeTotalMastery(allMasteryData,newMastery));
@@ -244,7 +243,7 @@ export default function Home() {
   if (!isLoaded) return (
     <main className="h-dvh flex flex-col bg-linear-to-b from-primary-700 to-[#922d3b] text-white select-none">
       <ToastProvider placement={"top-right"}/>
-      <Topbar clearLocalStorage={clearLocalStorage} loadFromLocalStorage={loadFromLocalStorage} saveItemsAsJson={saveItemsAsJson} uploadSave={uploadSave} currentMR={currentMR} currentMRName={currentMRName} affinityRanges={affinityRanges} currentAffinity={totalAffinity} />
+      <Topbar clearLocalStorage={clearLocalStorage} saveItemsAsJson={saveItemsAsJson} uploadSave={uploadSave} updateItemsList={updateItemsList} currentMR={currentMR} currentMRName={currentMRName} affinityRanges={affinityRanges} currentAffinity={totalAffinity} />
       <Tabs className="mt-2" color="primary"
         classNames={{
           tabList: "gap-5 m-auto  rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
@@ -526,7 +525,7 @@ export default function Home() {
   return (
     <main className="h-dvh flex flex-col bg-linear-to-b from-primary-700 to-[#922d3b] text-white overflow-x-hidden select-none">
       <ToastProvider placement={"top-right"}/>
-      <Topbar clearLocalStorage={clearLocalStorage} loadFromLocalStorage={loadFromLocalStorage} saveItemsAsJson={saveItemsAsJson} uploadSave={uploadSave} currentMR={currentMR} currentMRName={currentMRName} affinityRanges={affinityRanges} currentAffinity={totalAffinity} />
+      <Topbar clearLocalStorage={clearLocalStorage} saveItemsAsJson={saveItemsAsJson} uploadSave={uploadSave} updateItemsList={updateItemsList} currentMR={currentMR} currentMRName={currentMRName} affinityRanges={affinityRanges} currentAffinity={totalAffinity} />
       <Tabs className="mt-2" color="primary"
         classNames={{
           tabList: "gap-5 m-auto  rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",

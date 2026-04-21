@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Navbar, Link, NavbarBrand, NavbarContent, NavbarItem, Button, Modal, ModalContent, ModalFooter, ModalBody, ModalHeader, useDisclosure, Image, Popover, PopoverTrigger, PopoverContent, Switch, Divider } from "@heroui/react";
 import SaveUpload from "./SaveUpload";
 import { useGlobal } from '@/context/GlobalContext';
-import { ArrowDownTrayIcon, ArrowUpTrayIcon, EyeIcon, EyeSlashIcon, TrashIcon } from "@heroicons/react/24/solid";
+import { ArrowDownTrayIcon, ArrowUpTrayIcon, EyeIcon, EyeSlashIcon, TrashIcon, ArrowPathIcon } from "@heroicons/react/24/solid";
 
 
 interface TopbarProps {
     clearLocalStorage: () => void;
-    loadFromLocalStorage: () => void;
     saveItemsAsJson: () => void;
     uploadSave: (file: File) => void;
+    updateItemsList: () => void;
     currentMR: number;
     currentMRName: string;
     affinityRanges: number[];
@@ -25,7 +25,7 @@ export const GitHubIcon = ({ fill = "currentColor", ...props }) => {
     );
 };
 
-const Topbar: React.FC<TopbarProps> = ({ clearLocalStorage, saveItemsAsJson, loadFromLocalStorage, uploadSave, currentMR, currentMRName, affinityRanges, currentAffinity }) => {
+const Topbar: React.FC<TopbarProps> = ({ clearLocalStorage, saveItemsAsJson, updateItemsList, uploadSave, currentMR, currentMRName, affinityRanges, currentAffinity }) => {
     const [calculatedRange, setCalculatedRange] = useState<number>(2500);
     const [calculatedAffinity, setCalculatedAffinity] = useState<number>(0);
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -114,6 +114,11 @@ const Topbar: React.FC<TopbarProps> = ({ clearLocalStorage, saveItemsAsJson, loa
                     <NavbarItem>
                         <Button onPress={onOpen} variant="bordered" className="border-white/80 text-white rounded-full backdrop-blur-sm bg-white/5 hover:bg-white/10 hover:border-white md:text-sm">
                            <ArrowUpTrayIcon className="size-6"/> Upload save file
+                        </Button>
+                    </NavbarItem>
+                    <NavbarItem>
+                        <Button onPress={updateItemsList} variant="bordered" className="border-white/80 text-white rounded-full backdrop-blur-sm bg-white/5 hover:bg-white/10 hover:border-white md:text-sm">
+                               <ArrowPathIcon className="size-6"/>Update to newest patch
                         </Button>
                     </NavbarItem>
                 </NavbarContent>
