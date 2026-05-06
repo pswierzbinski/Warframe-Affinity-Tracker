@@ -34,9 +34,12 @@ export const CheckIcon = (props: any) => {
 const ItemList: React.FC<ItemListProps> = ({ items, setLevel }: ItemListProps) => {
   const [page, setPage] = useState(1);
   const itemsPerPage = 9;
-  const { hideMastered, setHideMastered } = useGlobal();
-  const tempItems = items.filter((item) => !hideMastered || item.currentLevel != item.maxLevelCap);
-  const totalPages = Math.ceil(tempItems.length / itemsPerPage);
+  const { hideMastered, setHideMastered, searchName } = useGlobal();
+  const tempItems = items.filter((item) => {
+    const matchesSearch = !searchName || item.name.toLowerCase().includes(searchName.toLowerCase());
+    const matchesMastered = !hideMastered || item.currentLevel != item.maxLevelCap;
+    return matchesSearch && matchesMastered;
+  });  const totalPages = Math.ceil(tempItems.length / itemsPerPage);
   const startIndex = (page - 1) * itemsPerPage;
   const currentItems = tempItems.slice(startIndex, startIndex + itemsPerPage);
 

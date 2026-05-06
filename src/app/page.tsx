@@ -8,8 +8,9 @@ import NodeList from "@/components/Starchart/NodeList";
 import { MapNode } from "@/classes/MapNode";
 import { Milestones } from "@/classes/Milestones";
 import IntrinsicsList from "@/components/Intrinsics/IntrinsicsList";
-import {addToast} from "@heroui/react";
+import { addToast } from "@heroui/react";
 import { mergeTotalMastery } from "@/components/Items/mergeTotalMastery";
+import ItemSearch from "@/components/Search/ItemSearch";
 
 export default function Home() {
   const [allMasteryData, setAllMasteryData] = useState<TotalMastery>(() => new TotalMastery);
@@ -17,7 +18,7 @@ export default function Home() {
   const [currentMR, setCurrentMR] = useState<number>(0);
   const [currentMRName, setCurrentMRName] = useState<string>("Unranked");
   const [affinityRanges, setAffinityRanges] = useState<number[]>([0, 2500]);
-  const MasteryRankHelper: Milestones = new Milestones(); 
+  const MasteryRankHelper: Milestones = new Milestones();
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const hasLoaded = useRef(false);
 
@@ -32,7 +33,7 @@ export default function Home() {
     }
 
     const data = localStorage.getItem("allMasteryData");
-      
+
     // tempData is created and used here in order for the initial render to calculate the mastery values properly
     if (data) {
       const parsed: TotalMastery = JSON.parse(data);
@@ -40,20 +41,20 @@ export default function Home() {
       setAllMasteryData(tempData);
       setTotalAffinity(tempData.getTotalAffinity())
     }
-    else{
-    fetchData();
-    updateRank();
-  }
+    else {
+      fetchData();
+      updateRank();
+    }
   }, []);
 
   useEffect(() => {
-  if (!hasLoaded.current && allMasteryData.Amp && allMasteryData.Amp.length > 0) {
-    hasLoaded.current = true;
-    setIsLoaded(true);
-    updateRank();
-  }
+    if (!hasLoaded.current && allMasteryData.Amp && allMasteryData.Amp.length > 0) {
+      hasLoaded.current = true;
+      setIsLoaded(true);
+      updateRank();
+    }
 
-}, [allMasteryData]);
+  }, [allMasteryData]);
   useEffect(() => {
     updateRank();
   }, [totalAffinity]);
@@ -85,7 +86,7 @@ export default function Home() {
     document.body.removeChild(a);
     window.URL.revokeObjectURL(url);
   };
-  
+
   const saveToLocalStorage = () => {
     if (allMasteryData) {
       localStorage.setItem("allMasteryData", JSON.stringify(allMasteryData));
@@ -102,14 +103,15 @@ export default function Home() {
       setAllMasteryData(TotalMastery.fromJSON(parsed));
       setTotalAffinity(allMasteryData.getTotalAffinity())
       addToast({
-      title: "Succesfully loaded saved data",
-      color: "success",
-    })}else
+        title: "Succesfully loaded saved data",
+        color: "success",
+      })
+    } else
       addToast({
-      title: "Couldn't load saved data",
-      description: "Saved data not found",
-      color: "danger",
-    })
+        title: "Couldn't load saved data",
+        description: "Saved data not found",
+        color: "danger",
+      })
   }
 
   const uploadSave = async (file: File) => {
@@ -145,7 +147,7 @@ export default function Home() {
       color: "warning",
     })
   }
-  
+
   const setLevel = (listName: keyof TotalMastery, name: string, level: number) => {
     allMasteryData.updateItemLevel(listName, name, level);
     setAllMasteryData(TotalMastery.fromJSON(allMasteryData));
@@ -163,18 +165,18 @@ export default function Home() {
             if (setTo) {
               newData.starchartExpSp += node.exp;
               tmp += node.exp;
-            }else {
+            } else {
               newData.starchartExpSp -= node.exp;
               tmp -= node.exp;
             }
           }
-        }else {
+        } else {
           if (node.isDone !== setTo) {
             node.isDone = setTo;
             if (setTo) {
               newData.starchartExp += node.exp;
               tmp += node.exp;
-            }else {
+            } else {
               newData.starchartExp -= node.exp;
               tmp -= node.exp;
             }
@@ -198,18 +200,18 @@ export default function Home() {
           if (setTo) {
             newData.starchartExpSp += node.exp;
             setTotalAffinity(totalAffinity + node.exp)
-          }else {
+          } else {
             newData.starchartExpSp -= node.exp;
             setTotalAffinity(totalAffinity - node.exp)
           }
         }
-      }else {
+      } else {
         if (node.isDone !== setTo) {
           node.isDone = setTo;
           if (setTo) {
             newData.starchartExp += node.exp;
             setTotalAffinity(totalAffinity + node.exp)
-          }else {
+          } else {
             newData.starchartExp -= node.exp;
             setTotalAffinity(totalAffinity - node.exp)
           }
@@ -226,15 +228,15 @@ export default function Home() {
     setAllMasteryData(newData);
     setTotalAffinity(newData.getTotalAffinity());
   }
-  
-  const updateItemsList = async() => {
-      const res = await fetch("/api/loadItems");
-      const data = await res.json();
-      const newMastery = TotalMastery.fromJSON(data);
-      setAllMasteryData(mergeTotalMastery(allMasteryData,newMastery));
-      addToast({
+
+  const updateItemsList = async () => {
+    const res = await fetch("/api/loadItems");
+    const data = await res.json();
+    const newMastery = TotalMastery.fromJSON(data);
+    setAllMasteryData(mergeTotalMastery(allMasteryData, newMastery));
+    addToast({
       title: "Success",
-      description:"Updated save data to the current patch",
+      description: "Updated save data to the current patch",
       color: "success",
     })
   }
@@ -242,7 +244,7 @@ export default function Home() {
   //this is to be changed into a proper skeleton
   if (!isLoaded) return (
     <main className="h-dvh flex flex-col bg-linear-to-b from-primary-700 to-[#922d3b] text-white select-none">
-      <ToastProvider placement={"top-right"}/>
+      <ToastProvider placement={"top-right"} />
       <Topbar clearLocalStorage={clearLocalStorage} saveItemsAsJson={saveItemsAsJson} uploadSave={uploadSave} updateItemsList={updateItemsList} currentMR={currentMR} currentMRName={currentMRName} affinityRanges={affinityRanges} currentAffinity={totalAffinity} />
       <Tabs className="mt-2" color="primary"
         classNames={{
@@ -323,11 +325,11 @@ export default function Home() {
           </div>
         } className="flex flex-col">
           <Tabs classNames={{
-                  tabList: "gap-5 m-auto  rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
-                  tab: "px-4 h-10 data-[hover=true]:bg-white/10",
-                  tabContent: "text-white",
-                  cursor: "bg-white/20 backdrop-blur-md",
-                }} variant="bordered" color="primary">
+            tabList: "gap-5 m-auto  rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
+            tab: "px-4 h-10 data-[hover=true]:bg-white/10",
+            tabContent: "text-white",
+            cursor: "bg-white/20 backdrop-blur-md",
+          }} variant="bordered" color="primary">
             <Tab title="Robotic Weapons">
             </Tab>
             <Tab title={
@@ -371,11 +373,11 @@ export default function Home() {
           </div>
         } className="flex flex-col">
           <Tabs classNames={{
-                  tabList: "gap-5 m-auto rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
-                  tab: "px-4 h-10 data-[hover=true]:bg-white/10",
-                  tabContent: "text-white",
-                  cursor: "bg-white/20 backdrop-blur-md",
-                }} variant="bordered" color="primary">
+            tabList: "gap-5 m-auto rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
+            tab: "px-4 h-10 data-[hover=true]:bg-white/10",
+            tabContent: "text-white",
+            cursor: "bg-white/20 backdrop-blur-md",
+          }} variant="bordered" color="primary">
             <Tab title="K-Drive">
             </Tab>
             <Tab title="Necramech">
@@ -396,11 +398,11 @@ export default function Home() {
           </div>
         } className="flex flex-col">
           <Tabs classNames={{
-                  tabList: "gap-5 m-auto rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
-                  tab: "px-4 h-10 data-[hover=true]:bg-white/10",
-                  tabContent: "text-white",
-                  cursor: "bg-white/20 backdrop-blur-md",
-                }} variant="bordered" color="primary">
+            tabList: "gap-5 m-auto rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
+            tab: "px-4 h-10 data-[hover=true]:bg-white/10",
+            tabContent: "text-white",
+            cursor: "bg-white/20 backdrop-blur-md",
+          }} variant="bordered" color="primary">
             <Tab title={
               <div className="flex flex-row gap-1">
                 <Image
@@ -483,11 +485,11 @@ export default function Home() {
           </div>
         } className="flex flex-col">
           <Tabs classNames={{
-                  tabList: "gap-5 m-auto rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
-                  tab: "px-4 h-10 data-[hover=true]:bg-white/10",
-                  tabContent: "text-white",
-                  cursor: "bg-white/20 backdrop-blur-md",
-                }} variant="bordered">
+            tabList: "gap-5 m-auto rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
+            tab: "px-4 h-10 data-[hover=true]:bg-white/10",
+            tabContent: "text-white",
+            cursor: "bg-white/20 backdrop-blur-md",
+          }} variant="bordered">
             <Tab title={
               <div className="flex flex-row gap-1">
                 <Image
@@ -521,177 +523,161 @@ export default function Home() {
 
     </main>
   );
-  
+
   return (
     <main className="h-dvh flex flex-col bg-linear-to-b from-primary-700 to-[#922d3b] text-white overflow-x-hidden select-none">
-      <ToastProvider placement={"top-right"}/>
+      <ToastProvider placement={"top-right"} />
       <Topbar clearLocalStorage={clearLocalStorage} saveItemsAsJson={saveItemsAsJson} uploadSave={uploadSave} updateItemsList={updateItemsList} currentMR={currentMR} currentMRName={currentMRName} affinityRanges={affinityRanges} currentAffinity={totalAffinity} />
-      <Tabs className="mt-2" color="primary"
-        classNames={{
-          tabList: "gap-5 m-auto  rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
-          tab: "px-4 h-10 data-[hover=true]:bg-white/10",
-          tabContent: "text-white",
-          cursor: "bg-white/20 backdrop-blur-md",
-        }} variant="bordered">
-        <Tab title={
-          <div className="flex flex-row gap-1">
-            <Image
-              alt={"Warframe"}
-              width={30}
-              height={30}
-              src={`/Icons/${"Warframe"}.webp`}
-              className="min-w-7.5 h-7.5"
-            />
-            <a className="text-base mt-1">Warframe</a>
-          </div>
-        }><div className="mt-18">
-            <ItemList items={allMasteryData?.Warframes || []} setLevel={setLevel} />
-          </div>
-        </Tab>
-        <Tab title={
-          <div className="flex flex-row gap-1">
-            <Image
-              alt={"Primary"}
-              width={30}
-              height={30}
-              src={`/Icons/${"Primary"}.webp`}
-              className="min-w-7.5 h-7.5"
-            />
-            <a className="text-base mt-1">Primary</a>
-          </div>
-        }>
-          <div className="mt-18">
-            <ItemList items={allMasteryData?.Primary || []} setLevel={setLevel} />
-          </div>
-        </Tab>
-        <Tab title={
-          <div className="flex flex-row gap-1">
-            <Image
-              alt={"Secondary"}
-              width={30}
-              height={30}
-              src={`/Icons/${"Secondary"}.webp`}
-              className="min-w-7.5 h-7.5"
-            />
-            <a className="text-base mt-1">Secondary</a>
-          </div>
-        }>
-          <div className="mt-18">
-            <ItemList items={allMasteryData?.Secondary || []} setLevel={setLevel} />
-          </div>
-        </Tab>
-        <Tab title={
-          <div className="flex flex-row gap-1">
-            <Image
-              alt={"Melee"}
-              width={30}
-              height={30}
-              src={`/Icons/${"Melee"}.webp`}
-              className="min-w-7.5 h-7.5"
-            />
-            <a className="text-base mt-1">Melee</a>
-          </div>
-        }>
-          <div className="mt-18">
-            <ItemList items={allMasteryData?.Melee || []} setLevel={setLevel} />
-          </div>
-        </Tab>
-        <Tab title={
-          <div className="flex flex-row gap-1">
-            <Image
-              alt={"Companions"}
-              width={30}
-              height={30}
-              src={`/Icons/${"Companions"}.webp`}
-              className="min-w-7.5 h-7.5"
-            />
-            <a className="text-base mt-1">Companions</a>
-          </div>
-        } className="flex flex-col">
-          <Tabs classNames={{
-                  tabList: "gap-5 m-auto  rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
-                  tab: "px-4 h-10 data-[hover=true]:bg-white/10",
-                  tabContent: "text-white",
-                  cursor: "bg-white/20 backdrop-blur-md",
-                }} variant="bordered" color="primary">
-            <Tab title="Robotic Weapons">
-              <ItemList items={allMasteryData?.SentinelWeapons || []} setLevel={setLevel} />
+      <div className="flex flex-row relative">
+        <div className=" flex flex-col w-full">
+          <Tabs className="mt-2" color="primary"
+            classNames={{
+              tabList: "gap-5 m-auto  rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20 searchAnchor",
+              tab: "px-4 h-10 data-[hover=true]:bg-white/10",
+              tabContent: "text-white",
+              cursor: "bg-white/20 backdrop-blur-md",
+            }} variant="bordered">
+            <Tab title={
+              <div className="flex flex-row gap-1">
+                <Image
+                  alt={"Warframe"}
+                  width={30}
+                  height={30}
+                  src={`/Icons/${"Warframe"}.webp`}
+                  className="min-w-7.5 h-7.5"
+                />
+                <a className="text-base mt-1">Warframe</a>
+              </div>
+            }><div className="mt-18">
+                <ItemList items={allMasteryData?.Warframes || []} setLevel={setLevel} />
+              </div>
             </Tab>
             <Tab title={
               <div className="flex flex-row gap-1">
                 <Image
-                  alt={"Robotics"}
+                  alt={"Primary"}
+                  width={30}
+                  height={30}
+                  src={`/Icons/${"Primary"}.webp`}
+                  className="min-w-7.5 h-7.5"
+                />
+                <a className="text-base mt-1">Primary</a>
+              </div>
+            }>
+              <div className="mt-18">
+                <ItemList items={allMasteryData?.Primary || []} setLevel={setLevel} />
+              </div>
+            </Tab>
+            <Tab title={
+              <div className="flex flex-row gap-1">
+                <Image
+                  alt={"Secondary"}
+                  width={30}
+                  height={30}
+                  src={`/Icons/${"Secondary"}.webp`}
+                  className="min-w-7.5 h-7.5"
+                />
+                <a className="text-base mt-1">Secondary</a>
+              </div>
+            }>
+              <div className="mt-18">
+                <ItemList items={allMasteryData?.Secondary || []} setLevel={setLevel} />
+              </div>
+            </Tab>
+            <Tab title={
+              <div className="flex flex-row gap-1">
+                <Image
+                  alt={"Melee"}
+                  width={30}
+                  height={30}
+                  src={`/Icons/${"Melee"}.webp`}
+                  className="min-w-7.5 h-7.5"
+                />
+                <a className="text-base mt-1">Melee</a>
+              </div>
+            }>
+              <div className="mt-18">
+                <ItemList items={allMasteryData?.Melee || []} setLevel={setLevel} />
+              </div>
+            </Tab>
+            <Tab title={
+              <div className="flex flex-row gap-1">
+                <Image
+                  alt={"Companions"}
                   width={30}
                   height={30}
                   src={`/Icons/${"Companions"}.webp`}
-                  className="min-w-7.5 h-7.5 object-contain"
+                  className="min-w-7.5 h-7.5"
                 />
-                <a className="text-base mt-1">Robotics</a>
+                <a className="text-base mt-1">Companions</a>
               </div>
-            }>
-              <ItemList items={allMasteryData?.Sentinels || []} setLevel={setLevel} />
+            } className="flex flex-col">
+              <Tabs classNames={{
+                tabList: "gap-5 m-auto  rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
+                tab: "px-4 h-10 data-[hover=true]:bg-white/10",
+                tabContent: "text-white",
+                cursor: "bg-white/20 backdrop-blur-md",
+              }} variant="bordered" color="primary">
+                <Tab title="Robotic Weapons">
+                  <ItemList items={allMasteryData?.SentinelWeapons || []} setLevel={setLevel} />
+                </Tab>
+                <Tab title={
+                  <div className="flex flex-row gap-1">
+                    <Image
+                      alt={"Robotics"}
+                      width={30}
+                      height={30}
+                      src={`/Icons/${"Companions"}.webp`}
+                      className="min-w-7.5 h-7.5 object-contain"
+                    />
+                    <a className="text-base mt-1">Robotics</a>
+                  </div>
+                }>
+                  <ItemList items={allMasteryData?.Sentinels || []} setLevel={setLevel} />
+                </Tab>
+                <Tab title={
+                  <div className="flex flex-row gap-1">
+                    <Image
+                      alt={"Beasts"}
+                      width={30}
+                      height={30}
+                      src={`/Icons/${"Beasts"}.webp`}
+                      className="min-w-7.5 h-7.5 object-contain"
+                    />
+                    <a className="text-base mt-1">Beasts</a>
+                  </div>
+                }>
+                  <ItemList items={allMasteryData?.Pets || []} setLevel={setLevel} />
+                </Tab>
+              </Tabs>
             </Tab>
             <Tab title={
               <div className="flex flex-row gap-1">
                 <Image
-                  alt={"Beasts"}
+                  alt={"Vehicles"}
                   width={30}
                   height={30}
-                  src={`/Icons/${"Beasts"}.webp`}
-                  className="min-w-7.5 h-7.5 object-contain"
+                  src={`/Icons/${"Vehicles"}.webp`}
+                  className="min-w-7.5 h-7.5"
                 />
-                <a className="text-base mt-1">Beasts</a>
+                <a className="text-base mt-1">Vehicles</a>
               </div>
-            }>
-              <ItemList items={allMasteryData?.Pets || []} setLevel={setLevel} />
-            </Tab>
-          </Tabs>
-        </Tab>
-        <Tab title={
-          <div className="flex flex-row gap-1">
-            <Image
-              alt={"Vehicles"}
-              width={30}
-              height={30}
-              src={`/Icons/${"Vehicles"}.webp`}
-              className="min-w-7.5 h-7.5"
-            />
-            <a className="text-base mt-1">Vehicles</a>
-          </div>
-        } className="flex flex-col">
-          <Tabs classNames={{
-                  tabList: "gap-5 m-auto rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
-                  tab: "px-4 h-10 data-[hover=true]:bg-white/10",
-                  tabContent: "text-white",
-                  cursor: "bg-white/20 backdrop-blur-md",
-                }} variant="bordered" color="primary">
-            <Tab title="K-Drive">
-              <ItemList items={allMasteryData?.Kdrives || []} setLevel={setLevel} />
-            </Tab>
-            <Tab title="Necramech">
-              <ItemList items={allMasteryData?.Necramech || []} setLevel={setLevel} />
-            </Tab>
+            } className="flex flex-col">
+              <Tabs classNames={{
+                tabList: "gap-5 m-auto rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
+                tab: "px-4 h-10 data-[hover=true]:bg-white/10",
+                tabContent: "text-white",
+                cursor: "bg-white/20 backdrop-blur-md",
+              }} variant="bordered" color="primary">
+                <Tab title="K-Drive">
+                  <ItemList items={allMasteryData?.Kdrives || []} setLevel={setLevel} />
+                </Tab>
+                <Tab title="Necramech">
+                  <ItemList items={allMasteryData?.Necramech || []} setLevel={setLevel} />
+                </Tab>
 
-          </Tabs>
-        </Tab>
-        <Tab title={
-          <div className="flex flex-row gap-1">
-            <Image
-              alt={"Archwing"}
-              width={30}
-              height={30}
-              src={`/Icons/${"Archwing"}.webp`}
-              className="min-w-7.5 h-7.5"
-            />
-            <a className="text-base mt-1">Archwing</a>
-          </div>
-        } className="flex flex-col">
-          <Tabs classNames={{
-                  tabList: "gap-5 m-auto rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
-                  tab: "px-4 h-10 data-[hover=true]:bg-white/10",
-                  tabContent: "text-white",
-                  cursor: "bg-white/20 backdrop-blur-md",
-                }} variant="bordered" color="primary">
+              </Tabs>
+            </Tab>
             <Tab title={
               <div className="flex flex-row gap-1">
                 <Image
@@ -704,117 +690,140 @@ export default function Home() {
                 <a className="text-base mt-1">Archwing</a>
               </div>
             } className="flex flex-col">
-              <ItemList items={allMasteryData?.Archwing || []} setLevel={setLevel} />
+              <Tabs classNames={{
+                tabList: "gap-5 m-auto rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
+                tab: "px-4 h-10 data-[hover=true]:bg-white/10",
+                tabContent: "text-white",
+                cursor: "bg-white/20 backdrop-blur-md",
+              }} variant="bordered" color="primary">
+                <Tab title={
+                  <div className="flex flex-row gap-1">
+                    <Image
+                      alt={"Archwing"}
+                      width={30}
+                      height={30}
+                      src={`/Icons/${"Archwing"}.webp`}
+                      className="min-w-7.5 h-7.5"
+                    />
+                    <a className="text-base mt-1">Archwing</a>
+                  </div>
+                } className="flex flex-col">
+                  <ItemList items={allMasteryData?.Archwing || []} setLevel={setLevel} />
+                </Tab>
+                <Tab title={
+                  <div className="flex flex-row gap-1">
+                    <Image
+                      alt={"Archmelee"}
+                      width={30}
+                      height={30}
+                      src={`/Icons/${"Archmelee"}.webp`}
+                      className="min-w-7.5 h-7.5"
+                    />
+                    <a className="text-base mt-1">Archmelee</a>
+                  </div>
+                } className="flex flex-col">
+                  <ItemList items={allMasteryData?.ArchMelee || []} setLevel={setLevel} />
+                </Tab>
+                <Tab title={
+                  <div className="flex flex-row gap-1">
+                    <Image
+                      alt={"Archgun"}
+                      width={30}
+                      height={30}
+                      src={`/Icons/${"Archgun"}.webp`}
+                      className="min-w-7.5 h-7.5"
+                    />
+                    <a className="text-base mt-1">Archgun</a>
+                  </div>
+                } className="flex flex-col">
+                  <ItemList items={allMasteryData?.ArchGun || []} setLevel={setLevel} />
+                </Tab>
+              </Tabs>
             </Tab>
             <Tab title={
               <div className="flex flex-row gap-1">
                 <Image
-                  alt={"Archmelee"}
+                  alt={"Amp"}
                   width={30}
                   height={30}
-                  src={`/Icons/${"Archmelee"}.webp`}
+                  src={`/Icons/${"Amp"}.webp`}
                   className="min-w-7.5 h-7.5"
                 />
-                <a className="text-base mt-1">Archmelee</a>
+                <a className="text-base mt-1">Amp</a>
               </div>
-            } className="flex flex-col">
-              <ItemList items={allMasteryData?.ArchMelee || []} setLevel={setLevel} />
+            }>
+              <div className="mt-18">
+                <ItemList items={allMasteryData?.Amp || []} setLevel={setLevel} />
+              </div>
             </Tab>
             <Tab title={
               <div className="flex flex-row gap-1">
                 <Image
-                  alt={"Archgun"}
+                  alt={"Starchart"}
                   width={30}
                   height={30}
-                  src={`/Icons/${"Archgun"}.webp`}
+                  src={`/Icons/${"Sortie"}.webp`}
                   className="min-w-7.5 h-7.5"
                 />
-                <a className="text-base mt-1">Archgun</a>
+                <a className="text-base mt-1">Starchart</a>
+              </div>
+            }>
+              <NodeList nodes={allMasteryData?.Nodes} setMastered={setMastered} setAllMastered={setAllMastered}></NodeList>
+            </Tab>
+            <Tab title={
+              <div className="flex flex-row gap-1">
+                <Image
+                  alt={"Intrinsics"}
+                  width={30}
+                  height={30}
+                  src={`/Icons/${"Intrinsics"}.webp`}
+                  className="min-w-7.5 h-7.5"
+                />
+                <a className="text-base mt-1">Intrinsics</a>
               </div>
             } className="flex flex-col">
-              <ItemList items={allMasteryData?.ArchGun || []} setLevel={setLevel} />
+              <Tabs classNames={{
+                tabList: "gap-5 m-auto rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
+                tab: "px-4 h-10 data-[hover=true]:bg-white/10",
+                tabContent: "text-white",
+                cursor: "bg-white/20 backdrop-blur-md",
+              }} variant="bordered">
+                <Tab title={
+                  <div className="flex flex-row gap-1">
+                    <Image
+                      alt={"Drifter"}
+                      width={30}
+                      height={30}
+                      src={`/Icons/${"Operator"}.webp`}
+                      className="min-w-7.5 h-7.5"
+                    />
+                    <a className="text-base mt-1">Drifter</a>
+                  </div>
+                } className="flex flex-col">
+                  <IntrinsicsList intrinsics={allMasteryData.drifterIntrinsics} drifter={true} updateIntrinsicLevel={updateIntrinsicLevel}></IntrinsicsList>
+                </Tab>
+                <Tab title={
+                  <div className="flex flex-row gap-1">
+                    <Image
+                      alt={"Railjack"}
+                      width={30}
+                      height={30}
+                      src={`/Icons/${"Railjack"}.webp`}
+                      className="min-w-7.5 h-7.5"
+                    />
+                    <a className="text-base mt-1">Railjack</a>
+                  </div>
+                } className="flex flex-col">
+                  <IntrinsicsList intrinsics={allMasteryData.railjackIntrinsics} drifter={false} updateIntrinsicLevel={updateIntrinsicLevel}></IntrinsicsList>
+                </Tab>
+              </Tabs>
             </Tab>
           </Tabs>
-        </Tab>
-        <Tab title={
-          <div className="flex flex-row gap-1">
-            <Image
-              alt={"Amp"}
-              width={30}
-              height={30}
-              src={`/Icons/${"Amp"}.webp`}
-              className="min-w-7.5 h-7.5"
-            />
-            <a className="text-base mt-1">Amp</a>
+        </div>
+          <div className="searchTarget ml-2">
+            <ItemSearch></ItemSearch>
           </div>
-        }>
-          <div className="mt-18">
-            <ItemList items={allMasteryData?.Amp || []} setLevel={setLevel} />
-          </div>
-        </Tab>
-        <Tab title={
-          <div className="flex flex-row gap-1">
-            <Image
-              alt={"Starchart"}
-              width={30}
-              height={30}
-              src={`/Icons/${"Sortie"}.webp`}
-              className="min-w-7.5 h-7.5"
-            />
-            <a className="text-base mt-1">Starchart</a>
-          </div>
-        }>
-          <NodeList nodes={allMasteryData?.Nodes} setMastered={setMastered} setAllMastered={setAllMastered}></NodeList>
-        </Tab>
-        <Tab title={
-          <div className="flex flex-row gap-1">
-            <Image
-              alt={"Intrinsics"}
-              width={30}
-              height={30}
-              src={`/Icons/${"Intrinsics"}.webp`}
-              className="min-w-7.5 h-7.5"
-            />
-            <a className="text-base mt-1">Intrinsics</a>
-          </div>
-        } className="flex flex-col">
-          <Tabs classNames={{
-                  tabList: "gap-5 m-auto rounded-xl p-2 bg-white/10 backdrop-blur-md border-white/20",
-                  tab: "px-4 h-10 data-[hover=true]:bg-white/10",
-                  tabContent: "text-white",
-                  cursor: "bg-white/20 backdrop-blur-md",
-                }} variant="bordered">
-            <Tab title={
-              <div className="flex flex-row gap-1">
-                <Image
-                  alt={"Drifter"}
-                  width={30}
-                  height={30}
-                  src={`/Icons/${"Operator"}.webp`}
-                  className="min-w-7.5 h-7.5"
-                />
-                <a className="text-base mt-1">Drifter</a>
-              </div>
-            } className="flex flex-col">
-              <IntrinsicsList intrinsics={allMasteryData.drifterIntrinsics} drifter={true} updateIntrinsicLevel={updateIntrinsicLevel}></IntrinsicsList>
-            </Tab>
-            <Tab title={
-              <div className="flex flex-row gap-1">
-                <Image
-                  alt={"Railjack"}
-                  width={30}
-                  height={30}
-                  src={`/Icons/${"Railjack"}.webp`}
-                  className="min-w-7.5 h-7.5"
-                />
-                <a className="text-base mt-1">Railjack</a>
-              </div>
-            } className="flex flex-col">
-              <IntrinsicsList intrinsics={allMasteryData.railjackIntrinsics} drifter={false} updateIntrinsicLevel={updateIntrinsicLevel}></IntrinsicsList>
-            </Tab>
-          </Tabs>
-        </Tab>
-      </Tabs>
+      </div>
       <div className="h-full grow"></div>
 
     </main>
