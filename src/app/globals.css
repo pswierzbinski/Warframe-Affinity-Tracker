@@ -32,12 +32,3 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-
-.searchAnchor {
-    anchor-name: --search;
-}
-.searchTarget{
-  position: absolute;
-  position-anchor: --search;
-  position-area: right;
-}

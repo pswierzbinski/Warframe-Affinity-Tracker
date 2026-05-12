@@ -3,6 +3,7 @@ import { Navbar, Link, NavbarBrand, NavbarContent, NavbarItem, Button, Modal, Mo
 import SaveUpload from "./SaveUpload";
 import { useGlobal } from '@/context/GlobalContext';
 import { ArrowDownTrayIcon, ArrowUpTrayIcon, EyeIcon, EyeSlashIcon, TrashIcon, ArrowPathIcon } from "@heroicons/react/24/solid";
+import ItemSearch from "../Search/ItemSearch";
 
 
 interface TopbarProps {
@@ -96,6 +97,14 @@ const Topbar: React.FC<TopbarProps> = ({ clearLocalStorage, saveItemsAsJson, upd
 
                         </div>
                     </NavbarItem>
+                    <NavbarItem>
+                        <div className="w-full">
+                            <ItemSearch></ItemSearch>
+                        </div>
+                    </NavbarItem>
+                    
+                    <Divider orientation="vertical" />
+
                     <NavbarItem>
                         <Button onPress={saveItemsAsJson} variant="bordered" className="border-white/80 text-white rounded-full backdrop-blur-sm bg-white/5 hover:bg-white/10 hover:border-white md:text-sm">
                                <ArrowDownTrayIcon className="size-6"/>Download Save

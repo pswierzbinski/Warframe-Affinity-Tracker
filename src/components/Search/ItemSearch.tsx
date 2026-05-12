@@ -24,16 +24,18 @@ const ItemSearch: React.FC = () => {
   }, [debouncedValue]);
 
   return (
-<div className="flex flex-col gap-4">
+<div className="ml-2 text-white">
   <Input 
-    label="Name" 
+    label="Filter item name" 
     placeholder="Enter the item name" 
     value={value} 
+    color="primary"
+    className="w-38"
     onValueChange={setValue}
     classNames={{
       label: "text-white",
       input: "text-white placeholder:text-white/50",
-      inputWrapper: "bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/15 focus-within:bg-white/15",
+      inputWrapper: "bg-white/10 backdrop-blur-md border border-white/20 data-[hover=true]:bg-white/15 focus-within:bg-white/15",
     }}
   />
 </div>
