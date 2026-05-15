@@ -35,7 +35,7 @@ const ItemSearch: React.FC = () => {
     classNames={{
       label: "text-white",
       input: "text-white placeholder:text-white/50",
-      inputWrapper: "bg-white/10 backdrop-blur-md border border-white/20 data-[hover=true]:bg-white/15 focus-within:bg-white/15",
+      inputWrapper: "bg-white/10 border border-white/20 data-[hover=true]:bg-white/15 focus-within:bg-white/15",
     }}
   />
 </div>

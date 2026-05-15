@@ -12,10 +12,10 @@ This is the first version of the tracker app and it will be improved and its fun
 
 (+ means what I am currently working on)</br>
 Future plans:
-* Search/filter lists <span style="color:yellow; font-weight: bold">+</span>
+* Search/filter lists <span style="color:green; font-weight: bold">✓</span>
 * Changing the way a new save is created <span style="color:green; font-weight: bold">✓</span>
 * Updating old save to new version <span style="color:green; font-weight: bold">✓</span>
-* Mobile version <span style="color:grey">(Works okay on mobile - further improvements are planned)</span>
+* Mobile version <span style="color:grey">(Works okay on mobile - further improvements are planned)</span><span style="color:yellow; font-weight: bold">+</span>
 * Show information about the cost of specific items, links to wiki
 * World status 
 ## 
