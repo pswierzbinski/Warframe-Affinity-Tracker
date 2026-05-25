@@ -11,6 +11,7 @@ import IntrinsicsList from "@/components/Intrinsics/IntrinsicsList";
 import { addToast } from "@heroui/react";
 import { mergeTotalMastery } from "@/components/Items/mergeTotalMastery";
 import ItemSearch from "@/components/Search/ItemSearch";
+import NavbarMobile from "@/components/NavbarMobile";
 
 export default function Home() {
   const [allMasteryData, setAllMasteryData] = useState<TotalMastery>(() => new TotalMastery);
@@ -21,7 +22,7 @@ export default function Home() {
   const MasteryRankHelper: Milestones = new Milestones();
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const hasLoaded = useRef(false);
-
+  const [activePage, setActivePage] = useState<"Warframe" | "Primary" | "Secondary" | "Melee" | "Companions" | "Vehicles" | "Archwing" | "Amp" | "Starchart" | "Intrinsics">("Warframe");
   useEffect(() => {
     async function fetchData() {
       const res = await fetch("/api/loadItems");
@@ -252,9 +253,9 @@ export default function Home() {
   );
 
   return (
-    <main className="h-dvh flex flex-col bg-linear-to-b from-primary-700 to-[#922d3b] text-white overflow-x-hidden select-none">
-      <ToastProvider placement={"top-right"}/>
-      
+    <main className="h-dvh flex bg-linear-to-b from-primary-700 to-[#922d3b] text-white overflow-x-hidden select-none">
+      <ToastProvider placement={"top-right"} />
+      <NavbarMobile clearLocalStorage={clearLocalStorage} saveItemsAsJson={saveItemsAsJson} uploadSave={uploadSave} updateItemsList={updateItemsList} currentMR={currentMR} currentMRName={currentMRName} affinityRanges={affinityRanges} currentAffinity={totalAffinity}></NavbarMobile>
       <div className="h-full grow"></div>
     </main>
   );

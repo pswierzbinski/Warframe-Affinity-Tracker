@@ -99,7 +99,7 @@ const Topbar: React.FC<TopbarProps> = ({ clearLocalStorage, saveItemsAsJson, upd
                     </NavbarItem>
                     <NavbarItem>
                         <div className="w-full">
-                            <ItemSearch></ItemSearch>
+                            <ItemSearch mobile={true}></ItemSearch>
                         </div>
                     </NavbarItem>
                     
